@@ -3,24 +3,119 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-lato: "Lato", sans-serif;
+
+  /* Orange (Set 1) */
+  --orange-light: #FBE7E7;
+  --orange-light-hover: #F8D4D4;
+  --orange-light-active: #F7B4B4;
+  --orange-normal: #DB4C4C;
+  --orange-normal-hover: #C73A3A;
+  --orange-normal-active: #B52A2A;
+  --orange-dark: #9A2626;
+  --orange-dark-hover: #7E1F1F;
+  --orange-dark-active: #5E1717;
+  --orange-darker: #421010;
+
+  /* Green */
+  --green-light: #E6F2EB;
+  --green-light-hover: #D3E6DC;
+  --green-light-active: #B6D4C1;
+  --green-normal: #0C7A4B;
+  --green-normal-hover: #0A6840;
+  --green-normal-active: #085A38;
+  --green-dark: #064A2F;
+  --green-dark-hover: #053F28;
+  --green-dark-active: #042E1C;
+  --green-darker: #031F13;
+
+  /* Orange (Set 2 – Yellow/Golden) */
+  --gold-light: #FFF3D8;
+  --gold-light-hover: #FDEBC3;
+  --gold-light-active: #F7DD9E;
+  --gold-normal: #F2B22F;
+  --gold-normal-hover: #E19F22;
+  --gold-normal-active: #C4871B;
+  --gold-dark: #A67314;
+  --gold-dark-hover: #8D5F0B;
+  --gold-dark-active: #6E4A09;
+  --gold-darker: #53380B;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  /* Orange (Set 1) */
+  --color-orange-light: var(--orange-light);
+  --color-orange-light-hover: var(--orange-light-hover);
+  --color-orange-light-active: var(--orange-light-active);
+  --color-orange-normal: var(--orange-normal);
+  --color-orange-normal-hover: var(--orange-normal-hover);
+  --color-orange-normal-active: var(--orange-normal-active);
+  --color-orange-dark: var(--orange-dark);
+  --color-orange-dark-hover: var(--orange-dark-hover);
+  --color-orange-dark-active: var(--orange-dark-active);
+  --color-orange-darker: var(--orange-darker);
+
+  /* Green */
+  --color-green-light: var(--green-light);
+  --color-green-light-hover: var(--green-light-hover);
+  --color-green-light-active: var(--green-light-active);
+  --color-green-normal: var(--green-normal);
+  --color-green-normal-hover: var(--green-normal-hover);
+  --color-green-normal-active: var(--green-normal-active);
+  --color-green-dark: var(--green-dark);
+  --color-green-dark-hover: var(--green-dark-hover);
+  --color-green-dark-active: var(--green-dark-active);
+  --color-green-darker: var(--green-darker);
+
+  /* Golden Orange (Set 2) */
+  --color-gold-light: var(--gold-light);
+  --color-gold-light-hover: var(--gold-light-hover);
+  --color-gold-light-active: var(--gold-light-active);
+  --color-gold-normal: var(--gold-normal);
+  --color-gold-normal-hover: var(--gold-normal-hover);
+  --color-gold-normal-active: var(--gold-normal-active);
+  --color-gold-dark: var(--gold-dark);
+  --color-gold-dark-hover: var(--gold-dark-hover);
+  --color-gold-dark-active: var(--gold-dark-active);
+  --color-gold-darker: var(--gold-darker);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
-  background: var(--background);
+  /* background: var(--background); */
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.active-link::before {
+  content: "";
+  width: 100%;
+  height: 3px;
+  bottom: -.6rem;
+  background-color: #FCCB2B;
+  position: absolute;
+  left: 0;
+
+}
+
+.active-link {
+  position: relative;
+}
+
+.layout-container {
+  width: 90vw;
+  max-width: 1280px;
+  margin: 0 auto;
 }
