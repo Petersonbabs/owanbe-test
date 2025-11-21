@@ -24,7 +24,7 @@ const Hero = () => {
                     </p>
 
                     <div className='flex gap-4 items-center'>
-                        <a href={process.env.NEXT_PUBLIC_OWANBER_URL} className="bg-[#fecc2a] hover:bg-[#fecc2a90] text-black font-bold py-1 md:py-3 px-3 md:px-8 rounded-full transition-colors">
+                        <a href={process.env.NEXT_PUBLIC_OWANBE_URL} className="bg-[#fecc2a] hover:bg-[#fecc2a90] text-black font-bold py-1 md:py-3 px-3 md:px-8 rounded-full transition-colors">
                             <span>Order now</span> <MoveRight className="inline-block ml-2" />
                         </a>
                         <Link href={"/about-us"} className="bg-transparent border border-black text-black font-bold px-3 md:py-3 py-1 md:px-8 rounded-full transition-colors">

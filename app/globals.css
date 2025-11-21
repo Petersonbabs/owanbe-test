@@ -3,6 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: #fecc2a;
   --font-lato: "Lato", sans-serif;
 
   /* Orange (Set 1) */
@@ -93,6 +94,9 @@
   }
 } */
 
+@component {
+}
+
 body {
   /* background: var(--background); */
   color: var(--foreground);
@@ -107,7 +111,7 @@ body {
   background-color: #FCCB2B;
   position: absolute;
   left: 0;
-
+  
 }
 
 .active-link {
@@ -123,3 +127,29 @@ body {
 .hero {
   background: url('../public/hero-bg.jpg') no-repeat center center;
 }
+
+  .btn-primary {
+    background-color: #fecc2a;
+    color: #000;
+    font-weight: bold;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    border-radius: 9999px;
+    transition-property: background-color;
+    transition-duration: 150ms;
+  }
+  
+  @media (min-width: 768px) {
+    .btn-primary {
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  
+  .btn-primary:hover {
+    background-color: #fecc2a90;
+  }
