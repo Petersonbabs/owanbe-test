@@ -39,7 +39,7 @@ export default function RootLayout({
         className={`${lato.variable}`}
       >
         <Navbar />
-        <div className="layout-container">
+        <div className="">
           {children}
         </div>
         <Footer />
