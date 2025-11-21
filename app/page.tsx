@@ -8,9 +8,9 @@ const page = () => {
   return (
     <div>
       <Hero />
-      <WeServe />
+      {/* <WeServe />
       <SIgnatureProducts />
-      <TraditionalItems />
+      <TraditionalItems /> */}
     </div>
   )
 }
