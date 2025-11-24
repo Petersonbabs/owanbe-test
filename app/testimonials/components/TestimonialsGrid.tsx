@@ -4,54 +4,54 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Sandra J.",
+    name: "Ibrahim U.",
     location: "Lagos, Nigeria",
     quote:
-      "Mofai Foods are what you get when you combine the authentic taste of grandma's kitchen with the convenience of modern-day life.",
-    avatar: "/images/avatar-1.jpg",
+      "MOFAI Foods' spices are premium quality! The suya spice blend is absolutely authentic and brings back memories of home.",
+    avatar: "/images/test1.png",
   },
   {
-    name: "Tolu T.",
+    name: "Taiwo T.",
     location: "Lagos, Nigeria",
     quote:
-      "Everything is just so good! The quality of ingredients and the taste are top-notch. I'm a loyal customer for life!",
-    avatar: "/images/avatar-2.jpg",
+     "Exceptional service and quality! The ready-to-eat meals save me so much time while still enjoying authentic flavors.",
+    avatar: "/images/test2.png",
   },
   {
-    name: "Joel I.",
+    name: "Joel S.",
     location: "Accra, Ghana",
     quote:
-      "I've been a loyal customer for years, and I'm always impressed with the consistency and quality of their meals.",
-    avatar: "/images/avatar-3.jpg",
+     "As a chef, I'm very particular about quality. MOFAI Foods delivers authentic African products that meet my high standards.",
+    avatar: "/images/test3.png",
   },
   {
     name: "Rachel D.",
     location: "Lagos, Nigeria",
     quote:
-      "Owambe Mart is a God-send! Their food is always fresh, delicious, and reminds me of home. Highly recommend!",
-    avatar: "/images/avatar-4.jpg",
+     "Owanbe Mart has been a lifesaver for our family gatherings! The party packs are generous and taste amazing.",
+    avatar: "/images/test4.png",
   },
   {
-    name: "Adekunle S.",
+    name: "Adebowale S.",
     location: "Abuja, Nigeria",
     quote:
-      "The best of African cuisine delivered right to your doorstep. Their customer service is also excellent!",
-    avatar: "/images/avatar-5.jpg",
+     "The best African food store I've found in Lagos! Great selection, fair prices, and excellent customer service.",
+    avatar: "/images/test1.png",
   },
 ];
 
 const TestimonialsGrid = () => {
   return (
-    <section className="bg-[#F5F5F5] py-12 md:py-16 px-[5%]">
+    <section className=" py-8 md:py-12 px-[5%]">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow"
+              className="bg-white border border-[#0000001A] rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow"
             >
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center overflow-hidden">
+                <div className="w-12 h-12 rounded-full  flex items-center justify-center overflow-hidden">
                   <Image
                     src={testimonial.avatar}
                     alt={testimonial.name}
@@ -82,7 +82,7 @@ const TestimonialsGrid = () => {
                   />
                 ))}
               </div>
-              <p className="text-gray-800 leading-relaxed">{testimonial.quote}</p>
+              <p className="text-gray-800 text-[0.9rem] md:text-[0.95rem] leading-relaxed">&quot;{testimonial.quote}&quot;</p>
             </div>
           ))}
         </div>
