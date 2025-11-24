@@ -1,4 +1,3 @@
-
 import { Facebook, Instagram } from "lucide-react";
 
 const SocialMediaSection = () => {
@@ -69,4 +68,3 @@ const SocialMediaSection = () => {
 };
 
 export default SocialMediaSection;
-
