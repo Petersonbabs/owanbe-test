@@ -12,10 +12,22 @@ const ContactInfoSection = () => {
                 <Phone className="w-6 h-6 text-[#DB4C4C]" />
               </div>
             </div>
-            <h3 className="text-[1.2rem] text-center md:text-[1.3rem] font-bold mb-4">Phone</h3>
+            <h3 className="text-[1.2rem] text-center md:text-[1.3rem] font-bold mb-4">
+              Phone
+            </h3>
             <div className="space-y-2 text-center text-[0.9rem] md:text-[0.95rem]">
-              <div>+234 815 300 3822</div>
-              <div>+234 706 211 5832</div>
+              <a
+                href="tel:+2348153003822"
+                className="block hover:text-[#F2B22F] transition-colors"
+              >
+                +234 815 300 3822
+              </a>
+              <a
+                href="tel:+2347062115832"
+                className="block hover:text-[#F2B22F] transition-colors"
+              >
+                +234 706 211 5832
+              </a>
             </div>
           </div>
 
@@ -25,20 +37,34 @@ const ContactInfoSection = () => {
                 <Mail className="w-6 h-6 text-[#DB4C4C]" />
               </div>
             </div>
-            <h3 className="text-[1.2rem] text-white text-center md:text-[1.3rem] font-bold mb-4">Email</h3>
+            <h3 className="text-[1.2rem] text-white text-center md:text-[1.3rem] font-bold mb-4">
+              Email
+            </h3>
             <div className="space-y-2 text-center text-[0.9rem] md:text-[0.95rem]">
-              <div>info@mofaifoods.com</div>
-              <div>mofaifoods@gmail.com</div>
+              <a
+                href="mailto:info@mofaifoods.com"
+                className="block hover:text-[#F2B22F] transition-colors"
+              >
+                info@mofaifoods.com
+              </a>
+              <a
+                href="mailto:mofaifoods@gmail.com"
+                className="block hover:text-[#F2B22F] transition-colors"
+              >
+                mofaifoods@gmail.com
+              </a>
             </div>
           </div>
 
           <div className="text-white text-center md:text-left">
             <div className="flex justify-center md:justify-center mb-4">
-                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
+              <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
                 <MapPin className="w-6 h-6 text-[#DB4C4C]" />
               </div>
             </div>
-            <h3 className="text-[1.2rem] text-white text-center md:text-[1.3rem] font-bold mb-4">Address</h3>
+            <h3 className="text-[1.2rem] text-white text-center md:text-[1.3rem] font-bold mb-4">
+              Address
+            </h3>
             <div className="space-y-2 text-center text-[0.9rem] md:text-[0.95rem] leading-relaxed">
               <div>
                 Owambe Mall, The Millionaire&apos;s Plaza, KM 14, Lekki-Epe
@@ -59,8 +85,12 @@ const ContactInfoSection = () => {
                 <Clock className="w-6 h-6 text-[#DB4C4C]" />
               </div>
             </div>
-            <h3 className="text-[1.2rem] text-white text-center md:text-[1.3rem] font-bold mb-4">Hours</h3>
-            <div className="text-center text-[0.9rem] md:text-[0.95rem]">Mon - Sun: 8am - 6pm</div>
+            <h3 className="text-[1.2rem] text-white text-center md:text-[1.3rem] font-bold mb-4">
+              Hours
+            </h3>
+            <div className="text-center text-[0.9rem] md:text-[0.95rem]">
+              Mon - Sun: 8am - 6pm
+            </div>
           </div>
         </div>
       </div>
