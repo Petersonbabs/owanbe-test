@@ -13,9 +13,9 @@ const Navbar = () => {
         setIsMenuOpen(!isMenuOpen)
     }
     return (
-        <header className="bg-background mb-4 py-4  shadow-sm sticky top-0 z-50">
-            <div className="w-[90vw]  max-w-7xl mx-auto flex justify-between gap-6 items-center">
-                <Link href="/" className="flex items-center   ">
+        <header className="bg-background py-4  shadow-sm sticky top-0 z-50">
+            <div className="w-[90vw]   max-w-7xl mx-auto flex justify-between gap-6 items-center">
+                <Link href="/" className="flex items-center ">
                     <Image
                         src="/brand/owanbe-logo.png"
                         alt="Logo"
@@ -32,7 +32,7 @@ const Navbar = () => {
                         height={50}
                     />
                 </Link>
-                <nav className="hidden md:flex self-end justify-end space-x-12 flex-wrap items-center">
+                <nav className="hidden md:flex self-end md:self-center justify-end  space-x-12 flex-wrap items-center">
                     <Link
                         href="/"
                         className={`text-black font-normal text-[16px] ${pathName === "/" && "active-link"} hover:text-[#FCCB2B] transition-colors`}
