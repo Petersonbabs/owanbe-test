@@ -14,7 +14,7 @@ const HeroSection = () => {
             <Heart className="w-4 h-4 text-[#D32E12]" />
           TESTIMONIALS
           </button>
-          <h1 className="text-[3.5rem] leading-[110%] md:text-[4.5rem] font-bold text-black uppercase mb-4">
+          <h1 className="text-[2.5rem] sm:text-[3.5rem] leading-[110%] md:text-[4.5rem] font-bold text-black uppercase mb-4">
             CUSTOMER 
             <br />
             <span className="text-[#F2B22F]">STORIES</span>

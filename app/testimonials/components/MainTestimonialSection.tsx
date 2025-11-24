@@ -7,7 +7,7 @@ const MainTestimonialSection = () => {
     <section className="bg-white py-16 md:py-24 px-[5%]">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-[2.5rem] leading-[110%] md:text-[3rem] font-bold mb-4">
+          <h2 className="text-[2rem] sm:text-[2.5rem] leading-[110%] md:text-[3rem] font-bold mb-4">
             <span className="text-black">WHAT OUR CUSTOMERS </span>
             <span className="text-[#F2B22F]">SAY</span>
           </h2>
