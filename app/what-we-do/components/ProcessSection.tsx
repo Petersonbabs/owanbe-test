@@ -21,7 +21,7 @@ const ProcessSection = () => {
                                 <Image src="/images/pro1.svg" alt="Source" width={24} height={24} />
                         </div>
                         <h3 className="text-[1.2rem] font-bold text-black mb-2">Source</h3>
-                        <p className="text-gray-600 text-[0.9rem] md:text-[0.95rem]">
+                        <p className="text-gray-600 px-[10%] text-[0.9rem] md:text-[0.95rem]">
                             Premium ingredients from trusted suppliers
                         </p>
                     </div>
@@ -31,7 +31,7 @@ const ProcessSection = () => {
                                 <Image src="/images/pro2.svg" alt="Craft" width={24} height={24} />
                         </div>
                         <h3 className="text-[1.2rem] font-bold text-black mb-2">Craft</h3>
-                        <p className="text-gray-600 text-[0.9rem] md:text-[0.95rem]">
+                        <p className="text-gray-600 px-[10%] text-[0.9rem] md:text-[0.95rem]">
                             Traditional recipes, expert preparation
                         </p>
                     </div>
@@ -41,7 +41,7 @@ const ProcessSection = () => {
                                 <Image src="/images/pro3.svg" alt="Check" width={24} height={24} />
                         </div>
                         <h3 className="text-[1.2rem] font-bold text-black mb-2">Quality Check</h3>
-                        <p className="text-gray-600 text-[0.9rem] md:text-[0.95rem]">
+                        <p className="text-gray-600 px-[10%] text-[0.9rem] md:text-[0.95rem]">
                             Rigorous standards maintained
                         </p>
                     </div>
@@ -51,7 +51,7 @@ const ProcessSection = () => {
                                 <Image src="/images/pro4.svg" alt="Deliver" width={24} height={24} />
                         </div>
                         <h3 className="text-[1.2rem] font-bold text-black mb-2">Deliver</h3>
-                        <p className="text-gray-600 text-[0.9rem] md:text-[0.95rem]">
+                        <p className="text-gray-600 px-[10%] text-[0.9rem] md:text-[0.95rem]">
                             Fresh to your door, event or kitchen
                         </p>
                     </div>

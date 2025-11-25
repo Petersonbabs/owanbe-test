@@ -1,9 +1,10 @@
 import React from "react";
 import Image from "next/image";
-import { Mail, ArrowRight } from "lucide-react";
+import { MessageCircle, ArrowRight } from "lucide-react";
 
 const ContactFormSection = () => {
-  const email = "mofaifoods@gmail.com";
+  const phoneNumber = "2348152093622";
+  const displayPhone = "+234 815 209 3622";
 
   return (
     <section className="bg-white py-12 md:py-16 px-[5%]">
@@ -28,23 +29,23 @@ const ContactFormSection = () => {
                 <span className="text-[#F2B22F]">MESSAGE</span>
               </h2>
               <p className="text-black text-[0.9rem] md:text-[0.95rem]">
-                Reach out to us via email and we&apos;ll get back to you within
-                24 hours
+                Reach out to us via WhatsApp and we&apos;ll get back to you
+                promptly
               </p>
             </div>
 
             <div className="space-y-6">
               <div className="bg-gray-50 border-2 border-gray-200 rounded-lg p-6 md:p-8">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-[#F2B22F] rounded-full flex items-center justify-center">
-                    <Mail className="w-6 h-6 text-black" />
+                  <div className="w-12 h-12 bg-[#25D366] rounded-full flex items-center justify-center">
+                    <MessageCircle className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <h3 className="text-[0.9rem] md:text-[1rem] font-semibold text-gray-600 uppercase">
-                      Our Email
+                      WhatsApp
                     </h3>
                     <p className="text-[1.1rem] md:text-[1.3rem] font-bold text-black">
-                      {email}
+                      {displayPhone}
                     </p>
                   </div>
                 </div>
@@ -52,21 +53,24 @@ const ContactFormSection = () => {
 
               <div className="space-y-4">
                 <p className="text-black text-[0.85rem] md:text-[0.9rem]">
-                  Have a question, inquiry, or feedback? Send us an email and
-                  our team will respond promptly.
+                  Have a question, inquiry, or feedback? Send us a message on
+                  WhatsApp and our team will respond promptly.
                 </p>
 
                 <a
-                  href={`mailto:${email}?subject=Contact%20Inquiry`}
-                  className="w-full bg-[#F2B22F] hover:bg-[#E19F22] text-black font-bold py-4 px-6 rounded-[24px] transition-colors flex items-center justify-center gap-2 uppercase text-[0.8rem] md:text-[0.9rem] shadow-md hover:shadow-lg"
+                  href={`https://wa.me/${phoneNumber}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-[#25D366] hover:bg-[#20BA5A] text-white font-bold py-4 px-6 rounded-[24px] transition-colors flex items-center justify-center gap-2 uppercase text-[0.8rem] md:text-[0.9rem] shadow-md hover:shadow-lg"
                 >
-                  <Mail className="w-5 h-5" />
-                  OPEN EMAIL CLIENT
+                  <MessageCircle className="w-5 h-5" />
+                  OPEN WHATSAPP
                   <ArrowRight className="w-5 h-5" />
                 </a>
 
                 <p className="text-gray-600 text-[0.75rem] md:text-[0.8rem] text-center">
-                  Click the button above to open your default email client
+                  Click the button above to open WhatsApp and start a
+                  conversation
                 </p>
               </div>
             </div>
