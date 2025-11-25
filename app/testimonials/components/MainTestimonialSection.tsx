@@ -4,7 +4,7 @@ import { Star } from "lucide-react";
 
 const MainTestimonialSection = () => {
   return (
-    <section className="bg-white py-16 md:py-24 px-[5%]">
+    <section className="bg-white py-12 md:py-16 px-[5%]">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-[2rem] sm:text-[2.5rem] leading-[110%] md:text-[3rem] font-bold mb-4">
@@ -18,7 +18,7 @@ const MainTestimonialSection = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="relative flex justify-center lg:justify-start">
-            <div className="relative w-80 h-80 md:w-96 md:h-96">
+            <div className="relative px-[5%] ">
               <div className="w-full h-full rounded-full overflow-hidden relative">
                 <Image
                   src="/images/customers.png"
@@ -41,7 +41,7 @@ const MainTestimonialSection = () => {
                 />
               ))}
             </div>
-            <blockquote className="text-[0.9rem] md:text-[1.15rem] font-medium text-black leading-relaxed">
+            <blockquote className="text-[1rem] md:text-[1.3rem] font-medium text-black leading-relaxed">
               &quot;The jollof rice from Owambe Mart tastes exactly like my mother&apos;s!
               I&apos;m so grateful to have found authentic Nigerian food here in
               Lagos!&quot;

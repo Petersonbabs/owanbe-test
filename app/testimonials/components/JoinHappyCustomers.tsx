@@ -1,6 +1,8 @@
-import React from 'react'
+'use client'
+import { useRouter } from 'next/navigation'
 
 const JoinHappyCustomers = () => {
+    const router = useRouter()
     return (
         <section className="bg-[#D32E12] py-12 md:py-16 px-[5%]">
             <div className="max-w-4xl mx-auto text-center">
@@ -14,7 +16,7 @@ const JoinHappyCustomers = () => {
                     <button className="bg-[#F55136] rounded-[24px] text-[0.85rem] md:text-[0.9rem] text-white font-bold py-3 px-5  transition-colors hover:bg-white hover:text-[#D32E12] w-full sm:w-auto">
                         START SHOPPING
                     </button>
-                    <button className="bg-[#0D4621] rounded-[24px] text-[0.85rem] md:text-[0.9rem] text-white font-bold py-3 px-5  transition-colors hover:bg-white hover:text-[#F55136] w-full sm:w-auto">
+                    <button onClick={() => router.push('/contact')} className="bg-[#0D4621] rounded-[24px] text-[0.85rem] md:text-[0.9rem] cursor-pointer text-white font-bold py-3 px-5  transition-colors hover:bg-white hover:text-[#F55136] w-full sm:w-auto">
                         CONTACT US
                     </button>
                 </div>

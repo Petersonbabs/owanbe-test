@@ -10,7 +10,7 @@ const FollowOurJourney = () => {
     { src: "/images/follow2.png", alt: "Event gathering" },
     { src: "/images/follow3.png", alt: "Indoor event" },
     { src: "/images/follow4.png", alt: "Event gathering" },
-    { src: "/images/follow5.png", alt: "Indoor event" },
+    { src: "/images/follow5.jpg", alt: "Indoor event" },
     { src: "/images/follow6.png", alt: "Celebration moment" },
     { src: "/images/follow7.png", alt: "Event gathering" },
     { src: "/images/follow8.png", alt: "Indoor event" },
@@ -74,9 +74,14 @@ const FollowOurJourney = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-2 gap-5 md:gap-5">
+        <div
+          className="grid grid-cols-1 lg:grid-rows-2 gap-5 mt-5 md:gap-5"
+          style={{
+            gridTemplateColumns: "calc(57.5% - 0.67rem) calc(42.5% - 0.67rem)",
+          }}
+        >
           <div
-            className="relative w-full h-full sm:h-[500px] md:h-[600px] lg:h-full lg:row-span-2 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+            className="relative w-full lg:row-span-2 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
             onClick={() => openLightbox(0)}
           >
             <Image
@@ -84,12 +89,12 @@ const FollowOurJourney = () => {
               alt="Celebration moment"
               width={913}
               height={800}
-              className="object-cover"
+              className="object-cover w-full h-full"
             />
           </div>
 
           <div
-            className="relative w-full h-[300px] md:h-[350px] lg:h-full rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+            className="relative w-full lg:row-span-1 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
             onClick={() => openLightbox(1)}
           >
             <Image
@@ -101,7 +106,7 @@ const FollowOurJourney = () => {
           </div>
 
           <div
-            className="relative w-full h-[300px] md:h-[350px] lg:h-full rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+            className="relative w-full lg:row-span-1 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
             onClick={() => openLightbox(2)}
           >
             <Image
@@ -113,9 +118,14 @@ const FollowOurJourney = () => {
           </div>
         </div>
 
-        <div className="grid mt-5 grid-cols-1 lg:grid-cols-2 lg:grid-rows-2 gap-5 md:gap-5">
+        <div
+          className="grid grid-cols-1 lg:grid-rows-2 gap-5 mt-5 md:gap-5"
+          style={{
+            gridTemplateColumns: "calc(42.5% - 0.67rem) calc(57.5% - 0.67rem)",
+          }}
+        >
           <div
-            className="relative w-full h-[300px] md:h-[350px] lg:h-full rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+            className="relative w-full lg:row-span-1 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
             onClick={() => openLightbox(3)}
           >
             <Image
@@ -127,27 +137,27 @@ const FollowOurJourney = () => {
           </div>
 
           <div
-            className="relative w-full h-[300px] md:h-[350px] lg:h-full rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+            className="relative w-full lg:row-span-1 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
             onClick={() => openLightbox(4)}
           >
             <Image
-              src="/images/follow5.png"
-              alt="Indoor event"
+              src="/images/follow5.jpg"
+              alt="Event gathering"
               fill
               className="object-cover"
             />
           </div>
 
           <div
-            className="relative w-full h-full sm:h-[500px] md:h-[600px] lg:h-full lg:row-span-2 lg:col-start-2 lg:row-start-1 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+            className="relative w-full lg:row-span-2 lg:col-start-2 lg:row-start-1 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
             onClick={() => openLightbox(5)}
           >
             <Image
               src="/images/follow6.png"
               alt="Celebration moment"
-              width={1116}
-              height={913}
-              className="object-cover"
+              width={913}
+              height={800}
+              className="object-cover w-full h-full"
             />
           </div>
         </div>

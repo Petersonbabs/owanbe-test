@@ -7,11 +7,11 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 const OurMoments = () => {
   const images = [
     { src: "/images/moments.png", alt: "Celebration moment" },
-    { src: "/images/moment2.png", alt: "Event gathering" },
-    { src: "/images/moment3.png", alt: "Indoor event" },
-    { src: "/images/moment4.png", alt: "Celebration moment" },
-    { src: "/images/moment5.png", alt: "Event gathering" },
-    { src: "/images/moment6.png", alt: "Indoor event" },
+    { src: "/images/moment2.jpg", alt: "Event gathering" },
+    { src: "/images/moment3.jpg", alt: "Indoor event" },
+    { src: "/images/moment4.jpg", alt: "Celebration moment" },
+    { src: "/images/moment5.jpg", alt: "Event gathering" },
+    { src: "/images/moment6.jpg", alt: "Indoor event" },
   ];
 
   const [isOpen, setIsOpen] = useState(false);
@@ -71,9 +71,14 @@ const OurMoments = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-2 gap-5 md:gap-5">
+        <div
+          className="grid grid-cols-1 lg:grid-rows-2 gap-5 md:gap-5"
+          style={{
+            gridTemplateColumns: "calc(57.5% - 0.67rem) calc(42.5% - 0.67rem)",
+          }}
+        >
           <div
-            className="relative w-full h-full sm:h-[500px] md:h-[600px] lg:h-full lg:row-span-2 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+            className="relative w-full lg:row-span-2 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
             onClick={() => openLightbox(0)}
           >
             <Image
@@ -81,12 +86,12 @@ const OurMoments = () => {
               alt="Celebration moment"
               width={913}
               height={800}
-              className="object-cover"
+              className="object-cover w-full h-full"
             />
           </div>
 
           <div
-            className="relative w-full h-[300px] md:h-[350px] lg:h-full rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+            className="relative w-full lg:row-span-1 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
             onClick={() => openLightbox(1)}
           >
             <Image
@@ -98,7 +103,7 @@ const OurMoments = () => {
           </div>
 
           <div
-            className="relative w-full h-[300px] md:h-[350px] lg:h-full rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+            className="relative w-full lg:row-span-1 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
             onClick={() => openLightbox(2)}
           >
             <Image
@@ -110,9 +115,14 @@ const OurMoments = () => {
           </div>
         </div>
 
-        <div className="grid mt-5 grid-cols-1 lg:grid-cols-2 lg:grid-rows-2 gap-5 md:gap-5">
+        <div
+          className="grid grid-cols-1 lg:grid-rows-2 gap-5 mt-5 md:gap-5"
+          style={{
+            gridTemplateColumns: "calc(57.5% - 0.67rem) calc(42.5% - 0.67rem)",
+          }}
+        >
           <div
-            className="relative w-full h-full sm:h-[500px] md:h-[600px] lg:h-full lg:row-span-2 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+            className="relative w-full lg:row-span-2 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
             onClick={() => openLightbox(3)}
           >
             <Image
@@ -120,12 +130,12 @@ const OurMoments = () => {
               alt="Celebration moment"
               width={913}
               height={800}
-              className="object-cover"
+              className="object-cover w-full h-full"
             />
           </div>
 
           <div
-            className="relative w-full h-[300px] md:h-[350px] lg:h-full rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+            className="relative w-full lg:row-span-1 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
             onClick={() => openLightbox(4)}
           >
             <Image
@@ -137,7 +147,7 @@ const OurMoments = () => {
           </div>
 
           <div
-            className="relative w-full h-[300px] md:h-[350px] lg:h-full rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+            className="relative w-full lg:row-span-1 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
             onClick={() => openLightbox(5)}
           >
             <Image
