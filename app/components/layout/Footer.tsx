@@ -11,26 +11,58 @@ const Footer = () => {
 
           {/* BRAND SECTION */}
           <div className="space-y-6">
-            <div>
-              <Image
-                src="/brand/owanbe-logo.png"
-                alt="Logo"
-                width={120}
-                height={50}
-                className="w-[120px] h-[50px] bg-[#ffffff]"
-              />
-              <p className="text-sm">READY-TO-EAT MEALS</p>
-            </div>
+            <div className="flex gap-6 flex-wrap justify-between items-center">
+              <div >
+                <Image
+                  src="/brand/owanbe-white-logo.png"
+                  alt="Logo"
+                  width={100}
+                  height={50}
+                  className="w-[100px] h-[50px] object-contain"
+                />
+                <p className="text-sm">READY-TO-EAT MEALS</p>
+                <div className="flex items-center space-x-4 mt-2">
+                  <Link
+                    href="https://www.facebook.com/share/15WgS6Ezrrk/?mibextid=wwXIfr"
+                    className="hover:text-[#fecc2a] border p-2 rounded-full bg-[#ffffff10]"
+                  >
+                    <Facebook />
+                  </Link>
+                  <Link
+                    href="https://www.instagram.com/owanbemart/?hl=en"
+                    className="hover:text-[#fecc2a] border p-2 rounded-full bg-[#ffffff10]"
+                  >
+                    <Instagram />
+                  </Link>
+                </div>
+              </div>
 
-            <div>
-              <Image
-                src="/brand/mofai-logo.png"
-                alt="Logo"
-                width={50}
-                height={50}
-                className="w-[50px] h-[50px]"
-              />
-              <p className="text-sm">PREMIUM INGREDIENTS</p>
+              <div>
+                <div className=" w-fit h-fit mb-2 rounded-full bg-[#012610] flex items-center justify-center">
+                  <Image
+                    src="/brand/mofai-footer-logo.png"
+                    alt="Logo"
+                    width={50}
+                    height={50}
+                    className="w-[50px] h-[50px] rounded-full"
+                  />
+                </div>
+                <p className="text-sm">PREMIUM INGREDIENTS</p>
+                <div className="mt-2 flex items-center space-x-4">
+                  <Link
+                    href="https://www.facebook.com/share/1ACDDXZLSY/?mibextid=wwXIfr"
+                    className="hover:text-[#fecc2a] border p-2 rounded-full bg-[#ffffff10]"
+                  >
+                    <Facebook />
+                  </Link>
+                  <Link
+                    href="https://www.instagram.com/mofaifoods?igsh=MWt4YnI4bmh1YTIzYw=="
+                    className="hover:text-[#fecc2a] border p-2 rounded-full bg-[#ffffff10]"
+                  >
+                    <Instagram />
+                  </Link>
+                </div>
+              </div>
             </div>
 
             <p>
@@ -39,7 +71,7 @@ const Footer = () => {
             </p>
 
             {/* SOCIAL ICONS */}
-            <div className="flex items-center space-x-4">
+            <div className="hidden items-center space-x-4">
               <Link
                 href="https://www.facebook.com/share/1ACDDXZLSY/?mibextid=wwXIfr"
                 className="hover:text-[#fecc2a] border p-2 rounded-full bg-[#ffffff10]"
@@ -56,7 +88,7 @@ const Footer = () => {
           </div>
 
           {/* LINKS SECTION */}
-          <div className="space-y-10">
+          <div className="space-y-10 md:ml-12">
             <div>
               <h3 className="text-xl font-bold mb-4 text-white">QUICK LINKS</h3>
               <ul className="space-y-2">
@@ -74,18 +106,18 @@ const Footer = () => {
                 <li>
                   <Link
                     href="/#signature-products"
-                    className="text-[#D32E12]"
+                    className=""
                   >
                     Order Meals / Ingredients
                   </Link>
                 </li>
                 <li>
-                  <Link href="/#meal" className="hover:text-[#fecc2a]">
-                    Premium African spices & more
+                  <Link href="/#menu" className="hover:text-[#fecc2a]">
+                    Ready-to-eat Nigerian dishes
                   </Link>
                 </li>
                 <li>
-                  <Link href="/#meal" className="hover:text-[#fecc2a]">
+                  <Link href="/#menu" className="hover:text-[#fecc2a]">
                     Premium African spices & more
                   </Link>
                 </li>
@@ -111,22 +143,22 @@ const Footer = () => {
             </form>
 
             {/* CONTACT INFO */}
-            <div className="space-y-4 text-sm mt-4">
-              <div className="flex gap-3 items-start">
+            <div className="space-y-4 text-sm mt-20">
+              <div className="flex gap-3 items-center">
                 <div className="h-10 w-10 flex items-center justify-center border rounded-xl">
                   <Phone className="h-4 w-4" />
                 </div>
-                <span>+234 815 209 3622 / +234 705 211 3552</span>
+                <span>+234 815 209 3622  / +234 705 211 3552</span>
               </div>
 
-              <div className="flex gap-3 items-start">
+              <div className="flex gap-3 items-center">
                 <div className="h-10 w-10 flex items-center justify-center border border-[#F8D210] bg-[#F8D21030] rounded-xl">
                   <Mail className="h-4 w-4 text-[#F8D210]" />
                 </div>
                 <span>mofaifoods@gmail.com</span>
               </div>
 
-              <div className="flex gap-3 items-start">
+              <div className="flex gap-3 items-center">
                 <div className="h-10 w-10 flex items-center justify-center border border-[#D62828] bg-[#D6282830] rounded-xl">
                   <MapPin className="h-4 w-4 text-[#D62828]" />
                 </div>
@@ -143,7 +175,7 @@ const Footer = () => {
         {/* BOTTOM BAR */}
         <div className="border-t border-gray-700 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p>&copy; 2025 Owanbe Mart & MOFAI Foods. All rights reserved.</p>
+            <p className="text-center md:text-start">&copy; 2025 Owanbe Mart & MOFAI Foods. All rights reserved.</p>
             <div className="flex gap-6">
               <Link href="#" className="hover:text-[#fecc2a]">Privacy Policy</Link>
               <Link href="#" className="hover:text-[#fecc2a]">Terms of Service</Link>
