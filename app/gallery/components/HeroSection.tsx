@@ -5,7 +5,7 @@ const HeroSection = () => {
       style={{ backgroundImage: `url('/images/gallery-hero.png')` }}
     >
       <div className="flex-1 flex flex-col justify-center items-center px-[5%] py-16 md:py-24 relative z-10">
-        <div className="bg-[#FFFFFF33]  text-white px-5 py-2.5 rounded-[24px] text-[0.85rem] md:text-[0.9rem] font-bold mb-8">
+        <div className="bg-[#FFFFFF33]  text-white px-5 py-2.5 rounded-3xl text-[0.85rem] md:text-[0.9rem] font-bold mb-8">
           EVENTS GALLERY
         </div>
 
@@ -18,7 +18,7 @@ const HeroSection = () => {
 
           <p className="text-white text-[0.9rem] md:text-[0.95rem] lg:text-[0.95rem] px-[12%] leading-relaxed mt-6">
             A visual journey through our meals, moments, and memories, captured
-            over 15 years of serving authentic Nigerian cuisine.
+            over 15 years of serving authentic Nigerian cuisines.
           </p>
         </div>
       </div>

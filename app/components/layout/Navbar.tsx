@@ -39,11 +39,12 @@ const Navbar = () => {
                     >
                         Home
                     </Link>
-                    <span
-                        className={`text-black font-normal text-[16px]  hover:text-[#FCCB2B] transition-colors`}
+                    <a
+                        href={process.env.NEXT_PUBLIC_OWANBE_URL}
+                        className={`text-black font-normal text-[16px] cursor-pointer hover:text-[#FCCB2B] transition-colors`}
                     >
-                        Order/Shop
-                    </span>
+                        Order Now
+                    </a>
                     <Link
                         href="/about-us"
                         className={`text-black font-normal text-[16px] ${pathName === "/about-us" && "active-link"} hover:text-[#FCCB2B] transition-colors`}

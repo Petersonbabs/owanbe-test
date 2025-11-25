@@ -7,7 +7,7 @@ const Features = () => {
         {
             image: <Target className="h-8 w-8 text-white" />,
             title: 'OUR MISSION',
-            description: 'To make authentic African cuisine accessible worldwide through premium ingredients and expertly prepared meals that honor tradition.',
+            description: 'To make authentic African cuisines accessible worldwide through premium ingredients and expertly prepared meals that honor tradition.',
         },
         {
             image: <Heart className="h-8 w-8 text-white" />,
