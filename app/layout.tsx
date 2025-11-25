@@ -7,17 +7,15 @@ import Footer from "./components/layout/Footer";
 const lato = Lato({
   subsets: ["latin"],
   weight: ["100", "300", "400", "700", "900"],
-  variable: "--font-lato"
-})
-
-
+  variable: "--font-lato",
+});
 
 export const metadata: Metadata = {
   title: "Mofai Foods",
   description: "Online Food ordering and delivery service",
   icons: {
-    icon: "/brand/mofai-logo.png"
-  }
+    icon: "/brand/mofai-logo.png",
+  },
 };
 
 export default function RootLayout({
@@ -27,13 +25,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${lato.variable}`}
-      >
+      <body className={`${lato.variable}`}>
         <Navbar />
-        <div className="">
-          {children}
-        </div>
+        <div className="">{children}</div>
         <Footer />
       </body>
     </html>
