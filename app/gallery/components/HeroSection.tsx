@@ -1,9 +1,20 @@
 const HeroSection = () => {
   return (
-    <section
-      className="relative bg-cover bg-center bg-no-repeat min-h-screen flex flex-col"
-      style={{ backgroundImage: `url('/images/gallery-hero.png')` }}
-    >
+    <section className="relative h-[80vh] sm:h-[90vh] flex flex-col overflow-hidden">
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="metadata"
+        poster="/images/gallery-hero.png"
+        className="absolute inset-0 w-full h-full object-cover z-0"
+      >
+        <source src="/images/vid.mp4" type="video/mp4" />
+      </video>
+
+      <div className="absolute inset-0 bg-black/20 z-1"></div>
+
       <div className="flex-1 flex flex-col justify-center items-center px-[5%] py-16 md:py-24 relative z-10">
         <div className="bg-[#FFFFFF33]  text-white px-5 py-2.5 rounded-[24px] text-[0.85rem] md:text-[0.9rem] font-bold mb-8">
           EVENTS GALLERY

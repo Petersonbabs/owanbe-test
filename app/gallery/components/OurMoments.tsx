@@ -71,93 +71,108 @@ const OurMoments = () => {
           </p>
         </div>
 
-        <div
-          className="grid grid-cols-1 lg:grid-rows-2 gap-5 md:gap-5"
-          style={{
-            gridTemplateColumns: "calc(57.5% - 0.67rem) calc(42.5% - 0.67rem)",
-          }}
-        >
+        {/* desktop view */}
+        <section className="mt-5 hidden sm:block">
           <div
-            className="relative w-full lg:row-span-2 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-            onClick={() => openLightbox(0)}
+            className="grid grid-cols-1 lg:grid-rows-2 gap-5 md:gap-5"
+            style={{
+              gridTemplateColumns:
+                "calc(57.5% - 0.67rem) calc(42.5% - 0.67rem)",
+            }}
           >
-            <Image
-              src="/images/moments.png"
-              alt="Celebration moment"
-              width={913}
-              height={800}
-              className="object-cover w-full h-full"
-            />
+            <div
+              className="relative w-full lg:row-span-2 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+              onClick={() => openLightbox(0)}
+            >
+              <Image
+                src="/images/moments.png"
+                alt="Celebration moment"
+                width={913}
+                height={800}
+                className="object-cover w-full h-full"
+              />
+            </div>
+
+            <div
+              className="relative w-full lg:row-span-1 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+              onClick={() => openLightbox(1)}
+            >
+              <Image
+                src="/images/moment2.png"
+                alt="Event gathering"
+                fill
+                className="object-cover"
+              />
+            </div>
+
+            <div
+              className="relative w-full lg:row-span-1 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+              onClick={() => openLightbox(2)}
+            >
+              <Image
+                src="/images/moment3.png"
+                alt="Indoor event"
+                fill
+                className="object-cover"
+              />
+            </div>
           </div>
 
           <div
-            className="relative w-full lg:row-span-1 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-            onClick={() => openLightbox(1)}
+            className="grid grid-cols-1 lg:grid-rows-2 gap-5 mt-5 md:gap-5"
+            style={{
+              gridTemplateColumns:
+                "calc(57.5% - 0.67rem) calc(42.5% - 0.67rem)",
+            }}
           >
-            <Image
-              src="/images/moment2.png"
-              alt="Event gathering"
-              fill
-              className="object-cover"
-            />
-          </div>
+            <div
+              className="relative w-full lg:row-span-2 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+              onClick={() => openLightbox(3)}
+            >
+              <Image
+                src="/images/moment4.png"
+                alt="Celebration moment"
+                width={913}
+                height={800}
+                className="object-cover w-full h-full"
+              />
+            </div>
 
-          <div
-            className="relative w-full lg:row-span-1 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-            onClick={() => openLightbox(2)}
-          >
-            <Image
-              src="/images/moment3.png"
-              alt="Indoor event"
-              fill
-              className="object-cover"
-            />
-          </div>
-        </div>
+            <div
+              className="relative w-full lg:row-span-1 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+              onClick={() => openLightbox(4)}
+            >
+              <Image
+                src="/images/moment5.png"
+                alt="Event gathering"
+                fill
+                className="object-cover"
+              />
+            </div>
 
-        <div
-          className="grid grid-cols-1 lg:grid-rows-2 gap-5 mt-5 md:gap-5"
-          style={{
-            gridTemplateColumns: "calc(57.5% - 0.67rem) calc(42.5% - 0.67rem)",
-          }}
-        >
-          <div
-            className="relative w-full lg:row-span-2 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-            onClick={() => openLightbox(3)}
-          >
-            <Image
-              src="/images/moment4.png"
-              alt="Celebration moment"
-              width={913}
-              height={800}
-              className="object-cover w-full h-full"
-            />
+            <div
+              className="relative w-full lg:row-span-1 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+              onClick={() => openLightbox(5)}
+            >
+              <Image
+                src="/images/moment6.png"
+                alt="Indoor event"
+                fill
+                className="object-cover"
+              />
+            </div>
           </div>
+        </section>
 
-          <div
-            className="relative w-full lg:row-span-1 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-            onClick={() => openLightbox(4)}
-          >
-            <Image
-              src="/images/moment5.png"
-              alt="Event gathering"
-              fill
-              className="object-cover"
-            />
-          </div>
+        {/* mobile view */}
+        <section className="grid mt-5 grid-cols-1 sm:hidden gap-5 md:gap-5">
+          {images.map((image, index) => (
+            <div key={index} className="relative w-full h-[300px] md:h-[500px] lg:h-full rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity" onClick={() => openLightbox(index)}>
+              <Image src={image.src} alt={image.alt} width={913} height={800} className="object-cover w-full h-full" />
+            </div>
+          ))}
+        </section>
 
-          <div
-            className="relative w-full lg:row-span-1 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-            onClick={() => openLightbox(5)}
-          >
-            <Image
-              src="/images/moment6.png"
-              alt="Indoor event"
-              fill
-              className="object-cover"
-            />
-          </div>
-        </div>
       </div>
 
       {isOpen && (
