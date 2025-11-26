@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { useScrollAnimation } from "@/app/hooks/useScrollAnimation";
 
 const OurMoments = () => {
   const images = [
@@ -58,8 +59,13 @@ const OurMoments = () => {
     setIsOpen(false);
   };
 
+  const sectionRef = useScrollAnimation({ animation: "fadeIn", duration: 0.8 });
+
   return (
-    <section className="bg-white py-16 md:py-24 px-[5%]">
+    <section
+      ref={sectionRef as React.RefObject<HTMLElement>}
+      className="bg-white py-16 md:py-24 px-[5%]"
+    >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-[2rem] sm:text-[2.5rem] leading-[110%] md:text-[3rem] font-bold mb-4">
@@ -167,12 +173,21 @@ const OurMoments = () => {
         {/* mobile view */}
         <section className="grid mt-5 grid-cols-1 sm:hidden gap-5 md:gap-5">
           {images.map((image, index) => (
-            <div key={index} className="relative w-full h-[300px] md:h-[500px] lg:h-full rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity" onClick={() => openLightbox(index)}>
-              <Image src={image.src} alt={image.alt} width={913} height={800} className="object-cover w-full h-full" />
+            <div
+              key={index}
+              className="relative w-full h-[300px] md:h-[500px] lg:h-full rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+              onClick={() => openLightbox(index)}
+            >
+              <Image
+                src={image.src}
+                alt={image.alt}
+                width={913}
+                height={800}
+                className="object-cover w-full h-full"
+              />
             </div>
           ))}
         </section>
-
       </div>
 
       {isOpen && (

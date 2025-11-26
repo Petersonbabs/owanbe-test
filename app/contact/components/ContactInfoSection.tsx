@@ -1,11 +1,23 @@
+"use client";
+
 import React from "react";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { useStaggerAnimation } from "@/app/hooks/useScrollAnimation";
 
 const ContactInfoSection = () => {
+  const gridRef = useStaggerAnimation(">div", {
+    animation: "slideUp",
+    duration: 0.6,
+    stagger: 0.1,
+  });
+
   return (
     <section className="">
       <div className="bg-[#D32E12] py-8 md:py-12 px-[5%]">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+        <div
+          ref={gridRef as React.RefObject<HTMLDivElement>}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12"
+        >
           <div className="text-white text-center md:text-left">
             <div className="flex justify-center md:justify-center mb-4">
               <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
@@ -91,11 +103,7 @@ const ContactInfoSection = () => {
             </div>
           </div>
         </div>
-
-        
       </div>
-
-      
     </section>
   );
 };

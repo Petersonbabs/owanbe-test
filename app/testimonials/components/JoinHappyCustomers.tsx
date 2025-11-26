@@ -1,10 +1,13 @@
 'use client'
 import { useRouter } from 'next/navigation'
+import { useScrollAnimation } from '@/app/hooks/useScrollAnimation';
 
 const JoinHappyCustomers = () => {
     const router = useRouter()
+    const sectionRef = useScrollAnimation({ animation: "scale", duration: 1 });
+
     return (
-        <section className="bg-[#D32E12] py-12 md:py-16 px-[5%]">
+        <section ref={sectionRef as React.RefObject<HTMLElement>} className="bg-[#D32E12] py-12 md:py-16 px-[5%]">
             <div className="max-w-4xl mx-auto text-center">
                 <h2 className="text-2xl md:text-[2.5rem] font-bold text-white mb-4">
                 JOIN OUR HAPPY CUSTOMERS

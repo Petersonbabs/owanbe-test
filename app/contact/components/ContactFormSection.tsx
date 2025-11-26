@@ -1,16 +1,25 @@
-import React from "react";
+"use client";
+
 import Image from "next/image";
 import { MessageCircle, ArrowRight } from "lucide-react";
+import { useScrollAnimation } from "@/app/hooks/useScrollAnimation";
 
 const ContactFormSection = () => {
-  // const phoneNumber = "2348152093622";
-  // const displayPhone = "+234 815 209 3622";
+  const imageRef = useScrollAnimation({ animation: "slideLeft", duration: 1 });
+  const contentRef = useScrollAnimation({
+    animation: "slideRight",
+    duration: 1,
+    delay: 0.2,
+  });
 
   return (
     <section className="bg-white py-12 md:py-16 px-[5%]">
       <div className="">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-          <div className="relative flex justify-center lg:justify-start">
+          <div
+            ref={imageRef as React.RefObject<HTMLDivElement>}
+            className="relative flex justify-center lg:justify-start"
+          >
             <div className="bg-white w-full h-full flex items-center justify-center relative overflow-hidden">
               <Image
                 src="/images/send.png"
@@ -22,7 +31,10 @@ const ContactFormSection = () => {
             </div>
           </div>
 
-          <div className="space-y-6">
+          <div
+            ref={contentRef as React.RefObject<HTMLDivElement>}
+            className="space-y-6"
+          >
             <div>
               <h2 className="text-[1.5rem] md:text-[2rem] font-bold uppercase mb-2">
                 <span className="text-black">SEND US A </span>

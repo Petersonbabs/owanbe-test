@@ -1,8 +1,16 @@
+"use client";
+
 import { Facebook, Instagram } from "lucide-react";
+import { useScrollAnimation } from "@/app/hooks/useScrollAnimation";
 
 const SocialMediaSection = () => {
+  const sectionRef = useScrollAnimation({ animation: "scale", duration: 1 });
+
   return (
-    <section className="bg-[#F9F9F9] py-8 md:py-12 px-[5%]">
+    <section
+      ref={sectionRef as React.RefObject<HTMLElement>}
+      className="bg-[#F9F9F9] py-8 md:py-12 px-[5%]"
+    >
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-[2rem] sm:text-[2.5rem] md:text-[3rem] font-bold uppercase mb-3">
           FOLLOW US

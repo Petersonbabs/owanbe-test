@@ -1,4 +1,14 @@
+"use client";
+
+import { useScrollAnimation } from "@/app/hooks/useScrollAnimation";
+
 const HeroSection = () => {
+  const contentRef = useScrollAnimation({
+    animation: "fadeIn",
+    duration: 1,
+    start: "top 90%",
+  });
+
   return (
     <section className="relative h-[80vh] sm:h-[90vh] flex flex-col overflow-hidden">
       <video
@@ -15,7 +25,10 @@ const HeroSection = () => {
 
       <div className="absolute inset-0 bg-black/20 z-1"></div>
 
-      <div className="flex-1 flex flex-col justify-center items-center px-[5%] py-16 md:py-24 relative z-10">
+      <div
+        ref={contentRef as React.RefObject<HTMLDivElement>}
+        className="flex-1 flex flex-col justify-center items-center px-[5%] py-16 md:py-24 relative z-10"
+      >
         <div className="bg-[#FFFFFF33]  text-white px-5 py-2.5 rounded-[24px] text-[0.85rem] md:text-[0.9rem] font-bold mb-8">
           EVENTS GALLERY
         </div>

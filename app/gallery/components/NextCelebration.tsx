@@ -1,14 +1,19 @@
+"use client";
+
 import React from 'react'
+import { useScrollAnimation } from '@/app/hooks/useScrollAnimation';
 
 const NextCelebration = () => {
+    const sectionRef = useScrollAnimation({ animation: "scale", duration: 1 });
+
     return (
-        <section className="bg-[#F9F9F9] py-8 md:py-12 px-[5%]">
+        <section ref={sectionRef as React.RefObject<HTMLElement>} className="bg-[#F9F9F9] py-8 md:py-12 px-[5%]">
             <div className="max-w-4xl mx-auto text-center">
                 <div className="bg-[#FCCB2B14] text-[#FCCB2B] px-4 py-2 rounded-[24px] text-[0.85rem] md:text-[0.9rem] font-bold mb-6 inline-block">
                     PLANNING AN EVENT?
                 </div>
 
-                <h2 className="text-[2rem] sm:text-[2.5rem] leading-[110%] md:text-[3rem]  font-bold text-[#F2B22F] uppercase mb-6">
+                <h2 className="text-[1.8rem] sm:text-[2.3rem] leading-[110%] md:text-[3rem]  font-bold text-[#F2B22F] uppercase mb-6">
                     NEXT CELEBRATION
                 </h2>
 

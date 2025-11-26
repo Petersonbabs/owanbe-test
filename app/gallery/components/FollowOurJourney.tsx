@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { useScrollAnimation } from "@/app/hooks/useScrollAnimation";
 
 const FollowOurJourney = () => {
   const images = [
@@ -61,11 +62,16 @@ const FollowOurJourney = () => {
     setIsOpen(false);
   };
 
+  const sectionRef = useScrollAnimation({ animation: "fadeIn", duration: 0.8 });
+
   return (
-    <section className="bg-white py-8 md:py-12 px-[5%]">
+    <section
+      ref={sectionRef as React.RefObject<HTMLElement>}
+      className="bg-white py-8 md:py-12 px-[5%]"
+    >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-[2rem] sm:text-[2.5rem] leading-[110%] md:text-[3rem] font-bold mb-4">
+          <h2 className="text-[1.8rem] sm:text-[2.3rem] leading-[110%] md:text-[3rem] font-bold mb-4">
             <span className="text-black">FOLLOW OUR </span>
             <span className="text-[#F2B22F]">JOURNEY</span>
           </h2>
@@ -166,8 +172,6 @@ const FollowOurJourney = () => {
             </div>
           </div>
         </section>
-
-        
 
         {/* mobile view */}
         <section className="grid mt-5 grid-cols-1 sm:hidden gap-5 md:gap-5">

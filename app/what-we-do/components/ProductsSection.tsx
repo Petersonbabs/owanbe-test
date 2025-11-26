@@ -1,12 +1,17 @@
+"use client";
 
 import Image from "next/image";
+import { useScrollAnimation } from '@/app/hooks/useScrollAnimation';
 
 const ProductsSection = () => {
+  const contentRef = useScrollAnimation({ animation: "slideRight", duration: 1 });
+  const imageRef = useScrollAnimation({ animation: "slideLeft", duration: 1, delay: 0.2 });
+
   return (
     <section className="bg-[#0D4621] py-8 md:py-12 px-[5%] relative overflow-hidden">
       <div className="">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="text-white space-y-6 z-10">
+          <div ref={contentRef as React.RefObject<HTMLDivElement>} className="text-white space-y-6 z-10">
             <div className="flex items-center gap-4 mb-8">
               <Image
                 src="/images/mofia.svg"
@@ -82,7 +87,7 @@ const ProductsSection = () => {
             </button>
           </div>
 
-          <div className="relative w-full h-full min-h-[400px] flex items-center justify-center">
+          <div ref={imageRef as React.RefObject<HTMLDivElement>} className="relative w-full h-full min-h-[400px] flex items-center justify-center">
             <Image
               src="/images/corn-sticks.png"
               className="w-full h-auto object-contain"
