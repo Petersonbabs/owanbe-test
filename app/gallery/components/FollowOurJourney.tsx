@@ -7,7 +7,7 @@ import { useScrollAnimation } from "@/app/hooks/useScrollAnimation";
 
 const FollowOurJourney = () => {
   const images = [
-        { src: "/images/follow1.jpg", alt: "Celebration moment" },
+    { src: "/images/follow1.jpg", alt: "Celebration moment" },
     { src: "/images/follow2.jpg", alt: "Event gathering" },
     { src: "/images/follow3.jpg", alt: "Indoor event" },
     { src: "/images/follow4.jpg", alt: "Event gathering" },
@@ -99,6 +99,8 @@ const FollowOurJourney = () => {
                 width={913}
                 height={800}
                 className="object-cover w-full h-full"
+                loading="eager"
+                sizes="(max-width: 768px) 100vw, 57.5vw"
               />
             </div>
 
@@ -111,6 +113,8 @@ const FollowOurJourney = () => {
                 alt="Event gathering"
                 fill
                 className="object-cover"
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 42.5vw"
               />
             </div>
 
@@ -123,6 +127,8 @@ const FollowOurJourney = () => {
                 alt="Indoor event"
                 fill
                 className="object-cover"
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 42.5vw"
               />
             </div>
           </div>
@@ -143,6 +149,8 @@ const FollowOurJourney = () => {
                 alt="Event gathering"
                 fill
                 className="object-cover"
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 42.5vw"
               />
             </div>
 
@@ -155,6 +163,8 @@ const FollowOurJourney = () => {
                 alt="Event gathering"
                 fill
                 className="object-cover"
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 42.5vw"
               />
             </div>
 
@@ -168,6 +178,8 @@ const FollowOurJourney = () => {
                 width={913}
                 height={800}
                 className="object-cover w-full h-full"
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 57.5vw"
               />
             </div>
           </div>
@@ -187,6 +199,8 @@ const FollowOurJourney = () => {
                 width={913}
                 height={800}
                 className="object-cover w-full h-full"
+                loading={index === 0 ? "eager" : "lazy"}
+                sizes="100vw"
               />
             </div>
           ))}
@@ -202,6 +216,8 @@ const FollowOurJourney = () => {
               alt="Event gathering"
               fill
               className="object-cover"
+              loading="lazy"
+              sizes="(max-width: 1024px) 100vw, 33.33vw"
             />
           </div>
 
@@ -214,6 +230,8 @@ const FollowOurJourney = () => {
               alt="Indoor event"
               fill
               className="object-cover"
+              loading="lazy"
+              sizes="(max-width: 1024px) 100vw, 33.33vw"
             />
           </div>
 
@@ -227,6 +245,8 @@ const FollowOurJourney = () => {
               width={1116}
               height={913}
               className="object-cover"
+              loading="lazy"
+              sizes="(max-width: 1024px) 100vw, 33.33vw"
             />
           </div>
         </div>
