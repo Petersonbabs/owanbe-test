@@ -95,20 +95,7 @@ const ContactInfoSection = () => {
         
       </div>
 
-      <div className="">
-          <div className="w-full rounded-lg overflow-hidden shadow-lg">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.57681832744!2d3.4549648731168294!3d6.448339524036101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf4f90f5a7f09%3A0x42ca9b1b5e653edb!2sWole%20Olateju%20Cres%2C%20Eti-Osa%2C%20Lekki%20106104%2C%20Lagos!5e0!3m2!1sen!2sng!4v1764067890663!5m2!1sen!2sng"
-              width="100%"
-              height="450"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="w-full h-[300px] md:h-[400px] lg:h-[450px]"
-            />
-          </div>
-        </div>
+      
     </section>
   );
 };

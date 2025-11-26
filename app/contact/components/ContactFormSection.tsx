@@ -3,8 +3,8 @@ import Image from "next/image";
 import { MessageCircle, ArrowRight } from "lucide-react";
 
 const ContactFormSection = () => {
-  const phoneNumber = "2348152093622";
-  const displayPhone = "+234 815 209 3622";
+  // const phoneNumber = "2348152093622";
+  // const displayPhone = "+234 815 209 3622";
 
   return (
     <section className="bg-white py-12 md:py-16 px-[5%]">
@@ -35,7 +35,7 @@ const ContactFormSection = () => {
             </div>
 
             <div className="space-y-6">
-              <div className="bg-gray-50 border-2 border-gray-200 rounded-lg p-6 md:p-8">
+              {/* <div className="bg-gray-50 border-2 border-gray-200 rounded-lg p-6 md:p-8">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-12 h-12 bg-[#25D366] rounded-full flex items-center justify-center">
                     <MessageCircle className="w-6 h-6 text-white" />
@@ -49,7 +49,7 @@ const ContactFormSection = () => {
                     </p>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               <div className="space-y-4">
                 <p className="text-black text-[0.85rem] md:text-[0.9rem]">
@@ -58,13 +58,13 @@ const ContactFormSection = () => {
                 </p>
 
                 <a
-                  href={`https://wa.me/${phoneNumber}`}
+                  href={`https://wa.me/message/GO344FTE6HHVK1`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full bg-[#25D366] hover:bg-[#20BA5A] text-white font-bold py-4 px-6 rounded-[24px] transition-colors flex items-center justify-center gap-2 uppercase text-[0.8rem] md:text-[0.9rem] shadow-md hover:shadow-lg"
+                  className="w-full bg-[#25D366] mt-5 hover:bg-[#20BA5A] text-white font-bold py-4 px-6 rounded-[24px] transition-colors flex items-center justify-center gap-2 uppercase text-[0.8rem] md:text-[0.9rem] shadow-md hover:shadow-lg"
                 >
                   <MessageCircle className="w-5 h-5" />
-                  OPEN WHATSAPP
+                  CHAT WITH US ON WHATSAPP
                   <ArrowRight className="w-5 h-5" />
                 </a>
 
