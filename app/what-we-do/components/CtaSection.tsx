@@ -2,10 +2,10 @@
 
 import React from 'react'
 import { useScrollAnimation } from '@/app/hooks/useScrollAnimation';
-
+import { useRouter } from 'next/navigation';
 const CtaSection = () => {
     const sectionRef = useScrollAnimation({ animation: "scale", duration: 1 });
-
+    const router = useRouter();
     return (
         <section ref={sectionRef as React.RefObject<HTMLElement>} className="bg-[#D32E12] py-12 md:py-16 px-[5%]">
             <div className="max-w-4xl mx-auto text-center">
@@ -16,10 +16,10 @@ const CtaSection = () => {
                     Choose your experience and discover the rich flavors of Africa
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <button className="bg-[#F55136] rounded-[24px] text-[0.85rem] md:text-[0.9rem] text-white font-bold py-2 px-5  transition-colors hover:bg-white hover:text-[#D32E12] w-full sm:w-auto">
+                    <button onClick={() => router.push('https://owanbemart.africa.restaurant/')}  className="bg-[#F55136] rounded-[24px] text-[0.85rem] md:text-[0.9rem] text-white font-bold py-2 px-5  transition-colors hover:bg-white hover:text-[#D32E12] w-full sm:w-auto">
                         ORDER MEALS
                     </button>
-                    <button className="bg-[#0D4621] rounded-[24px] text-[0.85rem] md:text-[0.9rem] text-white font-bold py-2 px-5  transition-colors hover:bg-white hover:text-[#F55136] w-full sm:w-auto">
+                    <button onClick={() => router.push('https://owanbemart.africa.restaurant/')}  className="bg-[#0D4621] rounded-[24px] text-[0.85rem] md:text-[0.9rem] text-white font-bold py-2 px-5  transition-colors hover:bg-white hover:text-[#F55136] w-full sm:w-auto">
                         ORDER NOW
                     </button>
                 </div>

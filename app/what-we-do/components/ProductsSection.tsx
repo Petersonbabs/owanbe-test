@@ -2,11 +2,12 @@
 
 import Image from "next/image";
 import { useScrollAnimation } from '@/app/hooks/useScrollAnimation';
-
+import { useRouter } from 'next/navigation';
 const ProductsSection = () => {
   const contentRef = useScrollAnimation({ animation: "slideRight", duration: 1 });
   const imageRef = useScrollAnimation({ animation: "slideLeft", duration: 1, delay: 0.2 });
 
+  const router = useRouter();
   return (
     <section className="bg-[#0D4621] py-8 md:py-12 px-[5%] relative overflow-hidden">
       <div className="">
@@ -82,7 +83,7 @@ const ProductsSection = () => {
               </li>
             </ul>
 
-            <button className="border-white border rounded-[24px] hover:bg-[#FF7F00] text-[0.9rem] md:text-[0.9rem] text-white font-bold py-3 px-6  transition-colors mt-6">
+            <button onClick={() => router.push('https://owanbemart.africa.restaurant/')}  className="border-white border rounded-[24px] hover:bg-[#FF7F00] text-[0.9rem] md:text-[0.9rem] text-white font-bold py-3 px-6  transition-colors mt-6">
               ORDER NOW
             </button>
           </div>
