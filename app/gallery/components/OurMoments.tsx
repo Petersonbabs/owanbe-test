@@ -104,7 +104,7 @@ const OurMoments = () => {
               onClick={() => openLightbox(1)}
             >
               <Image
-                src="/images/moment2.png"
+                src="/images/moment2.jpg"
                 alt="Event gathering"
                 fill
                 className="object-cover"
@@ -116,7 +116,7 @@ const OurMoments = () => {
               onClick={() => openLightbox(2)}
             >
               <Image
-                src="/images/moment3.png"
+                src="/images/moment3.jpg"
                 alt="Indoor event"
                 fill
                 className="object-cover"
@@ -136,7 +136,7 @@ const OurMoments = () => {
               onClick={() => openLightbox(3)}
             >
               <Image
-                src="/images/moment4.png"
+                src="/images/moment4.jpg"
                 alt="Celebration moment"
                 width={913}
                 height={800}
@@ -149,7 +149,7 @@ const OurMoments = () => {
               onClick={() => openLightbox(4)}
             >
               <Image
-                src="/images/moment5.png"
+                src="/images/moment5.jpg"
                 alt="Event gathering"
                 fill
                 className="object-cover"
@@ -161,7 +161,7 @@ const OurMoments = () => {
               onClick={() => openLightbox(5)}
             >
               <Image
-                src="/images/moment6.png"
+                src="/images/moment6.jpg"
                 alt="Indoor event"
                 fill
                 className="object-cover"
