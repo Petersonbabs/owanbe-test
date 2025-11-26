@@ -1,6 +1,8 @@
+"use client";
 
 import Image from "next/image";
 import { Star } from "lucide-react";
+import { useScrollAnimation, useStaggerAnimation } from '@/app/hooks/useScrollAnimation';
 
 const testimonials = [
   {
@@ -41,10 +43,12 @@ const testimonials = [
 ];
 
 const TestimonialsGrid = () => {
+  const gridRef = useStaggerAnimation(">div", { animation: "scale", duration: 0.6, stagger: 0.1 });
+
   return (
     <section className=" py-8 md:py-12 px-[5%]">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div ref={gridRef as React.RefObject<HTMLDivElement>} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}

@@ -1,11 +1,23 @@
+"use client";
+
 import React from "react";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { useStaggerAnimation } from "@/app/hooks/useScrollAnimation";
 
 const ContactInfoSection = () => {
+  const gridRef = useStaggerAnimation(">div", {
+    animation: "slideUp",
+    duration: 0.6,
+    stagger: 0.1,
+  });
+
   return (
-    <section className="bg-[#D32E12] py-12 md:py-16 px-[5%]">
-      <div className="">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+    <section className="">
+      <div className="bg-[#D32E12] py-8 md:py-12 px-[5%]">
+        <div
+          ref={gridRef as React.RefObject<HTMLDivElement>}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12"
+        >
           <div className="text-white text-center md:text-left">
             <div className="flex justify-center md:justify-center mb-4">
               <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
@@ -20,13 +32,13 @@ const ContactInfoSection = () => {
                 href="tel:+2348153003822"
                 className="block hover:text-[#F2B22F] transition-colors"
               >
-                +234 815 300 3822
+                +234 815 209 3622
               </a>
               <a
                 href="tel:+2347062115832"
                 className="block hover:text-[#F2B22F] transition-colors"
               >
-                +234 706 211 5832
+                +234 705 211 3552
               </a>
             </div>
           </div>
@@ -42,10 +54,10 @@ const ContactInfoSection = () => {
             </h3>
             <div className="space-y-2 text-center text-[0.9rem] md:text-[0.95rem]">
               <a
-                href="mailto:info@mofaifoods.com"
+                href="mailto:owanbemart@gmail.com"
                 className="block hover:text-[#F2B22F] transition-colors"
               >
-                info@mofaifoods.com
+                owanbemart@gmail.com
               </a>
               <a
                 href="mailto:mofaifoods@gmail.com"
@@ -67,14 +79,12 @@ const ContactInfoSection = () => {
             </h3>
             <div className="space-y-2 text-center text-[0.9rem] md:text-[0.95rem] leading-relaxed">
               <div>
-                Owambe Mall, The Millionaire&apos;s Plaza, KM 14, Lekki-Epe
-                Expressway, Lekki, Lagos.
+                Owanbe Mart: The Yellow Canpoy, Wole Olateju Crescent, Lekki
+                Lagos
               </div>
               <div>
-                HODMA Foods, Debbie Plaza, Badore Road, Ajah, Lekki, Lagos.
-              </div>
-              <div>
-                29, Ladipo Street, Junction Bus Stop, Lagos-Abeokuta Exp, Lagos.
+                MOFAI Foods: Golden Ever Yard, Tawa Badiru Close, Off Jabita
+                Street, Junction B/Stop, Langbasa-Ajah, Lagos
               </div>
             </div>
           </div>
