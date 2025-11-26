@@ -7,8 +7,8 @@ import BottomSection from "./components/BottomSection";
 const WhatWeDoPage = () => {
   return (
     <div>
-        <TopSection />
-        <BottomSection />
+      <TopSection />
+      <BottomSection />
       <ProductsSection />
       <ProcessSection />
       <CtaSection />
