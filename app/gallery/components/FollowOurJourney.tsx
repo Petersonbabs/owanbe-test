@@ -7,14 +7,14 @@ import { useScrollAnimation } from "@/app/hooks/useScrollAnimation";
 
 const FollowOurJourney = () => {
   const images = [
-    { src: "/images/follow1.png", alt: "Celebration moment" },
-    { src: "/images/follow2.png", alt: "Event gathering" },
-    { src: "/images/follow3.png", alt: "Indoor event" },
-    { src: "/images/follow4.png", alt: "Event gathering" },
+        { src: "/images/follow1.jpg", alt: "Celebration moment" },
+    { src: "/images/follow2.jpg", alt: "Event gathering" },
+    { src: "/images/follow3.jpg", alt: "Indoor event" },
+    { src: "/images/follow4.jpg", alt: "Event gathering" },
     { src: "/images/follow5.jpg", alt: "Indoor event" },
-    { src: "/images/follow6.png", alt: "Celebration moment" },
-    { src: "/images/follow7.png", alt: "Event gathering" },
-    { src: "/images/follow8.png", alt: "Indoor event" },
+    { src: "/images/follow6.jpg", alt: "Celebration moment" },
+    { src: "/images/follow7.jpg", alt: "Event gathering" },
+    { src: "/images/follow8.jpg", alt: "Indoor event" },
     { src: "/images/follow9.jpg", alt: "Celebration moment" },
   ];
 
@@ -94,7 +94,7 @@ const FollowOurJourney = () => {
               onClick={() => openLightbox(0)}
             >
               <Image
-                src="/images/follow1.png"
+                src="/images/follow1.jpg"
                 alt="Celebration moment"
                 width={913}
                 height={800}
@@ -107,7 +107,7 @@ const FollowOurJourney = () => {
               onClick={() => openLightbox(1)}
             >
               <Image
-                src="/images/follow2.png"
+                src="/images/follow2.jpg"
                 alt="Event gathering"
                 fill
                 className="object-cover"
@@ -119,7 +119,7 @@ const FollowOurJourney = () => {
               onClick={() => openLightbox(2)}
             >
               <Image
-                src="/images/follow3.png"
+                src="/images/follow3.jpg"
                 alt="Indoor event"
                 fill
                 className="object-cover"
@@ -139,7 +139,7 @@ const FollowOurJourney = () => {
               onClick={() => openLightbox(3)}
             >
               <Image
-                src="/images/follow4.png"
+                src="/images/follow4.jpg"
                 alt="Event gathering"
                 fill
                 className="object-cover"
@@ -163,7 +163,7 @@ const FollowOurJourney = () => {
               onClick={() => openLightbox(5)}
             >
               <Image
-                src="/images/follow6.png"
+                src="/images/follow6.jpg"
                 alt="Celebration moment"
                 width={913}
                 height={800}
@@ -198,7 +198,7 @@ const FollowOurJourney = () => {
             onClick={() => openLightbox(6)}
           >
             <Image
-              src="/images/follow7.png"
+              src="/images/follow7.jpg"
               alt="Event gathering"
               fill
               className="object-cover"
@@ -210,7 +210,7 @@ const FollowOurJourney = () => {
             onClick={() => openLightbox(7)}
           >
             <Image
-              src="/images/follow8.png"
+              src="/images/follow8.jpg"
               alt="Indoor event"
               fill
               className="object-cover"
