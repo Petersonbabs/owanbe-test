@@ -42,7 +42,7 @@ const HeroSection = () => {
 
           <p className="text-white text-[0.9rem] md:text-[0.95rem] lg:text-[0.95rem] px-[12%] leading-relaxed mt-6">
             A visual journey through our meals, moments, and memories, captured
-            over 15 years of serving authentic Nigerian cuisine.
+            over 15 years of serving authentic Nigerian cuisines.
           </p>
         </div>
       </div>

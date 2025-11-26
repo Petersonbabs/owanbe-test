@@ -1,6 +1,7 @@
 import React from 'react'
 import ProductCard from '../ui/ProductCard'
 import Link from 'next/link'
+import { Ampersand } from 'lucide-react'
 
 const SignatureProducts = () => {
     const products = [
@@ -72,11 +73,16 @@ const SignatureProducts = () => {
         <section className="bg-gray-100 py-16 px-6 md:px-12" id='signature-products'>
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-12 relative w-fit m-auto max-w-[600px]">
-                    <img src="/brand/mofai-logo.png" className='absolute  right-6 -top-12 ' alt="" width={90} height={90} />
                     <div className='relative z-10'>
-                        <h2 className="text-3xl md:text-4xl font-bold z-8 mb-4">
-                            SIGNATURE <span className="text-[#fecc2a]">PRODUCTS</span>
-                        </h2>
+                        <div className="text-3xl md:text-4xl flex flex-col items-center font-bold z-8 mb-4">
+                            <h2><span className='text-[#fecc2a]'>SIGNATURE PRODUCTS</span> FROM</h2>
+                            <div className='flex gap-4 items-center'>
+                                <img src="/brand/owanbe-logo.png" className='w-32 p-0 mb-4 object-contain' />
+                                <Ampersand />
+                                <img src="/brand/mofai-logo.png" className='w-18 p-0 mb-4 object-contain' />
+                            </div>
+                        </div>
+                        {/* <img src="/brand/mofai-logo.png" className='absolute  right-6 -top-12 ' alt="" width={90} height={90} /> */}
                         <p className="text-gray-600 max-w-2xl mx-auto">
                             Explore our range of authentic African ingredients and specialty
                             items, carefully selected for quality and flavor.
@@ -97,10 +103,10 @@ const SignatureProducts = () => {
                         />
                     ))}
                 </div>
-                <div className="text-center">
-                    <Link href={process.env.NEXT_PUBLIC_OWANBE_URL as string} className="bg-transparent border border-black text-black px-3 md:py-3 py-2 text-sm md:px-8 rounded-full transition-colors">
+                <div className="text-center mt-16">
+                    <a href={process.env.NEXT_PUBLIC_OWANBE_URL as string} className="bg-transparent border border-black text-black px-3 md:py-3 py-2 text-sm md:px-8 rounded-full transition-colors">
                         <span>VIEW ALL PRODUCTS</span>
-                    </Link>
+                    </a>
                 </div>
             </div>
         </section>
