@@ -96,6 +96,8 @@ const OurMoments = () => {
                 width={913}
                 height={800}
                 className="object-cover w-full h-full"
+                loading="eager"
+                sizes="(max-width: 768px) 100vw, 57.5vw"
               />
             </div>
 
@@ -108,6 +110,8 @@ const OurMoments = () => {
                 alt="Event gathering"
                 fill
                 className="object-cover"
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 42.5vw"
               />
             </div>
 
@@ -120,6 +124,8 @@ const OurMoments = () => {
                 alt="Indoor event"
                 fill
                 className="object-cover"
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 42.5vw"
               />
             </div>
           </div>
@@ -141,6 +147,8 @@ const OurMoments = () => {
                 width={913}
                 height={800}
                 className="object-cover w-full h-full"
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 57.5vw"
               />
             </div>
 
@@ -153,6 +161,8 @@ const OurMoments = () => {
                 alt="Event gathering"
                 fill
                 className="object-cover"
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 42.5vw"
               />
             </div>
 
@@ -165,6 +175,8 @@ const OurMoments = () => {
                 alt="Indoor event"
                 fill
                 className="object-cover"
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 42.5vw"
               />
             </div>
           </div>
@@ -184,6 +196,8 @@ const OurMoments = () => {
                 width={913}
                 height={800}
                 className="object-cover w-full h-full"
+                loading={index === 0 ? "eager" : "lazy"}
+                sizes="100vw"
               />
             </div>
           ))}
