@@ -97,12 +97,13 @@ const Navbar = () => {
                         >
                             Home
                         </Link>
-                        <span
-
+                        <Link
+                            onClick={toggleMenu}
+                            href={process.env.NEXT_PUBLIC_OWANBE_URL as string}
                             className={`text-black font-normal text-[16px]  hover:text-[#FCCB2B] transition-colors`}
                         >
                             Order Now
-                        </span>
+                        </Link>
                         <Link
                             onClick={toggleMenu}
                             href="/about-us"

@@ -1,10 +1,14 @@
+"use client";
+
 import { Heart } from "lucide-react";
 import React from "react";
+import { useScrollAnimation } from '@/app/hooks/useScrollAnimation';
 
 const HeroSection = () => {
+  const sectionRef = useScrollAnimation({ animation: "fadeIn", duration: 0.8 });
+
   return (
-    // background image
-    <section className="bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('/images/text-bg.png')` }}>
+    <section ref={sectionRef as React.RefObject<HTMLElement>} className="bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('/images/text-bg.png')` }}>
       <div className="max-w-7xl mx-auto py-16 md:py-24 px-[5%]  ">
         
 

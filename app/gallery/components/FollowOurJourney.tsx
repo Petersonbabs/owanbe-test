@@ -3,18 +3,19 @@
 import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { useScrollAnimation } from "@/app/hooks/useScrollAnimation";
 
 const FollowOurJourney = () => {
   const images = [
-    { src: "/images/follow1.png", alt: "Celebration moment" },
-    { src: "/images/follow2.png", alt: "Event gathering" },
-    { src: "/images/follow3.png", alt: "Indoor event" },
-    { src: "/images/follow4.png", alt: "Event gathering" },
-    { src: "/images/follow5.png", alt: "Indoor event" },
-    { src: "/images/follow6.png", alt: "Celebration moment" },
-    { src: "/images/follow7.png", alt: "Event gathering" },
-    { src: "/images/follow8.png", alt: "Indoor event" },
-    { src: "/images/follow9.png", alt: "Celebration moment" },
+    { src: "/images/follow1.jpg", alt: "Celebration moment" },
+    { src: "/images/follow2.jpg", alt: "Event gathering" },
+    { src: "/images/follow3.jpg", alt: "Indoor event" },
+    { src: "/images/follow4.jpg", alt: "Event gathering" },
+    { src: "/images/follow5.jpg", alt: "Indoor event" },
+    { src: "/images/follow6.jpg", alt: "Celebration moment" },
+    { src: "/images/follow7.jpg", alt: "Event gathering" },
+    { src: "/images/follow8.jpg", alt: "Indoor event" },
+    { src: "/images/follow9.jpg", alt: "Celebration moment" },
   ];
 
   const [isOpen, setIsOpen] = useState(false);
@@ -61,11 +62,16 @@ const FollowOurJourney = () => {
     setIsOpen(false);
   };
 
+  const sectionRef = useScrollAnimation({ animation: "fadeIn", duration: 0.8 });
+
   return (
-    <section className="bg-white py-8 md:py-12 px-[5%]">
+    <section
+      ref={sectionRef as React.RefObject<HTMLElement>}
+      className="bg-white py-8 md:py-12 px-[5%]"
+    >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-[2rem] sm:text-[2.5rem] leading-[110%] md:text-[3rem] font-bold mb-4">
+          <h2 className="text-[1.8rem] sm:text-[2.3rem] leading-[110%] md:text-[3rem] font-bold mb-4">
             <span className="text-black">FOLLOW OUR </span>
             <span className="text-[#F2B22F]">JOURNEY</span>
           </h2>
@@ -74,83 +80,131 @@ const FollowOurJourney = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-2 gap-5 md:gap-5">
+        {/* desktop view */}
+        <section className="hidden sm:block">
           <div
-            className="relative w-full h-full sm:h-[500px] md:h-[600px] lg:h-full lg:row-span-2 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-            onClick={() => openLightbox(0)}
+            className="grid grid-cols-1 lg:grid-rows-2 gap-5 mt-5 md:gap-5"
+            style={{
+              gridTemplateColumns:
+                "calc(57.5% - 0.67rem) calc(42.5% - 0.67rem)",
+            }}
           >
-            <Image
-              src="/images/follow1.png"
-              alt="Celebration moment"
-              width={913}
-              height={800}
-              className="object-cover"
-            />
+            <div
+              className="relative w-full lg:row-span-2 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+              onClick={() => openLightbox(0)}
+            >
+              <Image
+                src="/images/follow1.jpg"
+                alt="Celebration moment"
+                width={913}
+                height={800}
+                className="object-cover w-full h-full"
+                loading="eager"
+                sizes="(max-width: 768px) 100vw, 57.5vw"
+              />
+            </div>
+
+            <div
+              className="relative w-full lg:row-span-1 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+              onClick={() => openLightbox(1)}
+            >
+              <Image
+                src="/images/follow2.jpg"
+                alt="Event gathering"
+                fill
+                className="object-cover"
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 42.5vw"
+              />
+            </div>
+
+            <div
+              className="relative w-full lg:row-span-1 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+              onClick={() => openLightbox(2)}
+            >
+              <Image
+                src="/images/follow3.jpg"
+                alt="Indoor event"
+                fill
+                className="object-cover"
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 42.5vw"
+              />
+            </div>
           </div>
 
           <div
-            className="relative w-full h-[300px] md:h-[350px] lg:h-full rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-            onClick={() => openLightbox(1)}
+            className="grid grid-cols-1 lg:grid-rows-2 gap-5 mt-5 md:gap-5"
+            style={{
+              gridTemplateColumns:
+                "calc(42.5% - 0.67rem) calc(57.5% - 0.67rem)",
+            }}
           >
-            <Image
-              src="/images/follow2.png"
-              alt="Event gathering"
-              fill
-              className="object-cover"
-            />
-          </div>
+            <div
+              className="relative w-full lg:row-span-1 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+              onClick={() => openLightbox(3)}
+            >
+              <Image
+                src="/images/follow4.jpg"
+                alt="Event gathering"
+                fill
+                className="object-cover"
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 42.5vw"
+              />
+            </div>
 
-          <div
-            className="relative w-full h-[300px] md:h-[350px] lg:h-full rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-            onClick={() => openLightbox(2)}
-          >
-            <Image
-              src="/images/follow3.png"
-              alt="Indoor event"
-              fill
-              className="object-cover"
-            />
-          </div>
-        </div>
+            <div
+              className="relative w-full lg:row-span-1 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+              onClick={() => openLightbox(4)}
+            >
+              <Image
+                src="/images/follow5.jpg"
+                alt="Event gathering"
+                fill
+                className="object-cover"
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 42.5vw"
+              />
+            </div>
 
-        <div className="grid mt-5 grid-cols-1 lg:grid-cols-2 lg:grid-rows-2 gap-5 md:gap-5">
-          <div
-            className="relative w-full h-[300px] md:h-[350px] lg:h-full rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-            onClick={() => openLightbox(3)}
-          >
-            <Image
-              src="/images/follow4.png"
-              alt="Event gathering"
-              fill
-              className="object-cover"
-            />
+            <div
+              className="relative w-full lg:row-span-2 lg:col-start-2 lg:row-start-1 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+              onClick={() => openLightbox(5)}
+            >
+              <Image
+                src="/images/follow6.jpg"
+                alt="Celebration moment"
+                width={913}
+                height={800}
+                className="object-cover w-full h-full"
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 57.5vw"
+              />
+            </div>
           </div>
+        </section>
 
-          <div
-            className="relative w-full h-[300px] md:h-[350px] lg:h-full rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-            onClick={() => openLightbox(4)}
-          >
-            <Image
-              src="/images/follow5.png"
-              alt="Indoor event"
-              fill
-              className="object-cover"
-            />
-          </div>
-
-          <div
-            className="relative w-full h-full sm:h-[500px] md:h-[600px] lg:h-full lg:row-span-2 lg:col-start-2 lg:row-start-1 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-            onClick={() => openLightbox(5)}
-          >
-            <Image
-              src="/images/follow6.png"
-              alt="Celebration moment"
-              width={1116}
-              height={913}
-              className="object-cover"
-            />
-          </div>
-        </div>
+        {/* mobile view */}
+        <section className="grid mt-5 grid-cols-1 sm:hidden gap-5 md:gap-5">
+          {images.slice(0, 6).map((image, index) => (
+            <div
+              key={index}
+              className="relative w-full h-[300px] md:h-[500px] lg:h-full rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+              onClick={() => openLightbox(index)}
+            >
+              <Image
+                src={image.src}
+                alt={image.alt}
+                width={913}
+                height={800}
+                className="object-cover w-full h-full"
+                loading={index === 0 ? "eager" : "lazy"}
+                sizes="100vw"
+              />
+            </div>
+          ))}
+        </section>
 
         <div className="grid mt-5 grid-cols-1 lg:grid-cols-3 gap-5 md:gap-5">
           <div
@@ -158,10 +212,12 @@ const FollowOurJourney = () => {
             onClick={() => openLightbox(6)}
           >
             <Image
-              src="/images/follow7.png"
+              src="/images/follow7.jpg"
               alt="Event gathering"
               fill
               className="object-cover"
+              loading="lazy"
+              sizes="(max-width: 1024px) 100vw, 33.33vw"
             />
           </div>
 
@@ -170,10 +226,12 @@ const FollowOurJourney = () => {
             onClick={() => openLightbox(7)}
           >
             <Image
-              src="/images/follow8.png"
+              src="/images/follow8.jpg"
               alt="Indoor event"
               fill
               className="object-cover"
+              loading="lazy"
+              sizes="(max-width: 1024px) 100vw, 33.33vw"
             />
           </div>
 
@@ -182,11 +240,13 @@ const FollowOurJourney = () => {
             onClick={() => openLightbox(8)}
           >
             <Image
-              src="/images/follow9.png"
+              src="/images/follow9.jpg"
               alt="Celebration moment"
               width={1116}
               height={913}
               className="object-cover"
+              loading="lazy"
+              sizes="(max-width: 1024px) 100vw, 33.33vw"
             />
           </div>
         </div>
