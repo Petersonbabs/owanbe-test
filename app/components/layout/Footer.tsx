@@ -97,6 +97,8 @@ const Footer = () => {
                 <li><Link href="/#menu" className="hover:text-[#fecc2a]">Menu</Link></li>
                 <li><Link href="/gallery" className="hover:text-[#fecc2a]">Gallery</Link></li>
                 <li><Link href="/contact" className="hover:text-[#fecc2a]">Contact</Link></li>
+                <li><Link href="/privacy-policy" className="hover:text-[#fecc2a]">Privacy Policy</Link></li>
+                <li><Link href="/terms" className="hover:text-[#fecc2a]">Terms of Service</Link></li>
               </ul>
             </div>
 
@@ -148,14 +150,19 @@ const Footer = () => {
                 <div className="h-10 w-10 flex items-center justify-center border rounded-xl">
                   <Phone className="h-4 w-4" />
                 </div>
-                <span>+234 815 209 3622  / +234 705 211 3552</span>
+               <div className="space-y-1 flex flex-col">
+               <Link className="hover:text-[#fecc2a]" href="tel:+2348152093622">+234 815 209 3622</Link>
+               <Link className="hover:text-[#fecc2a]" href="tel:+2347052113552">+234 705 211 3552</Link>
+               </div>
               </div>
 
               <div className="flex gap-3 items-center">
                 <div className="h-10 w-10 flex items-center justify-center border border-[#F8D210] bg-[#F8D21030] rounded-xl">
                   <Mail className="h-4 w-4 text-[#F8D210]" />
                 </div>
-                <span>mofaifoods@gmail.com</span>
+                <div className="space-y-1 flex flex-col">
+               <Link className="hover:text-[#fecc2a]" href="mailto:mofaifoods@gmail.com">mofaifoods@gmail.com</Link>
+               </div>
               </div>
 
               <div className="flex gap-3 items-center">
