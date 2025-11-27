@@ -115,6 +115,13 @@ body {
 
 }
 
+@media (max-width: 640px) {
+  .active-link::before {
+    background-color: transparent;
+    color: #fccb2b;
+  }
+}
+
 .active-link {
   position: relative;
 }

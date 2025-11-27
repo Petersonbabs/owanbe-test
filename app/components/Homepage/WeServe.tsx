@@ -14,7 +14,7 @@ const WeServe = () => {
     const meals = [
         {
             image: '/homepage/meal/meal-1.png',
-            title: 'Amala Yam Flour',
+            title: 'Amala & Gbegiri',
             description: 'Smooth swallow served with delicious soup',
             actionText: 'ORDER MEAL',
         },
@@ -26,7 +26,7 @@ const WeServe = () => {
         },
         {
             image: '/homepage/meal/meal-3.png',
-            title: 'Premium Jollof Rice',
+            title: 'Smoky Jollof Rice',
             description: 'Classic West African one-pot rice dish',
             actionText: 'ORDER MEAL',
         },
@@ -44,7 +44,7 @@ const WeServe = () => {
         },
         {
             image: '/homepage/meal/meal-6.png',
-            title: 'Grilled Fish',
+            title: 'YOYO ( Whitebait Fish)',
             description: 'Perfectly seasoned fresh fish',
             actionText: 'ORDER MEAL',
         },
@@ -180,7 +180,7 @@ const WeServe = () => {
                         ref={descriptionRef}
                         className="text-gray-600 max-w-2xl mx-auto opacity-0"
                     >
-                        Authentic Jollof Rice, Delicious Fried Rice, Pepper Soup, Suya, Grilled Fish and More
+                        Authentic Jollof Rice, Delicious Fried Rice, Pepper Soup, Suya, Whitebait Fish and More
                     </p>
                 </div>
 

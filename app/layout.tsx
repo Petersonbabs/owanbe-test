@@ -3,6 +3,7 @@ import { Lato } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
+import NewsletterPopup from "./components/ui/NewsLetterPopup";
 
 const lato = Lato({
   subsets: ["latin"],
@@ -29,6 +30,7 @@ export default function RootLayout({
         <Navbar />
         <div className="">{children}</div>
         <Footer />
+        <NewsletterPopup />
       </body>
     </html>
   );

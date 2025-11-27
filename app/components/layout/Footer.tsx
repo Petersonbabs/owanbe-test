@@ -1,18 +1,51 @@
+"use client";
+
 import { Facebook, Instagram, Mail, MapPin, Phone, Send } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+
+  const handleSubscribe = async (e:any) => {
+    e.preventDefault();
+    if (!email) return;
+
+    setLoading(true);
+
+    try {
+      const res = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+
+      if (res.ok) {
+        setSuccess(true);
+        setEmail("");
+        setTimeout(() => setSuccess(false), 3000);
+      }
+    } catch (err) {
+      console.error(err);
+    }
+
+    setLoading(false);
+  };
+
   return (
     <footer className="bg-[#0d4621] text-[#ffffff90] pt-16 pb-8 px-6 md:px-12 border-t-4 border-[#FECC2A]">
       <div className="max-w-7xl mx-auto">
+
         {/* GRID LAYOUT */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
 
           {/* BRAND SECTION */}
           <div className="space-y-6">
             <div className="flex gap-6 flex-wrap justify-between items-center">
-              <div >
+              <div>
                 <Image
                   src="/brand/owanbe-white-logo.png"
                   alt="Logo"
@@ -38,7 +71,7 @@ const Footer = () => {
               </div>
 
               <div>
-                <div className=" w-fit h-fit mb-2 rounded-full bg-[#012610] flex items-center justify-center">
+                <div className="w-fit h-fit mb-2 rounded-full bg-[#012610] flex items-center justify-center">
                   <Image
                     src="/brand/mofai-footer-logo.png"
                     alt="Logo"
@@ -69,22 +102,6 @@ const Footer = () => {
               Bringing authentic African flavors to your table through premium
               ingredients and professionally prepared meals.
             </p>
-
-            {/* SOCIAL ICONS */}
-            <div className="hidden items-center space-x-4">
-              <Link
-                href="https://www.facebook.com/share/1ACDDXZLSY/?mibextid=wwXIfr"
-                className="hover:text-[#fecc2a] border p-2 rounded-full bg-[#ffffff10]"
-              >
-                <Facebook />
-              </Link>
-              <Link
-                href="https://www.instagram.com/mofaifoods?igsh=MWt4YnI4bmh1YTIzYw=="
-                className="hover:text-[#fecc2a] border p-2 rounded-full bg-[#ffffff10]"
-              >
-                <Instagram />
-              </Link>
-            </div>
           </div>
 
           {/* LINKS SECTION */}
@@ -106,10 +123,7 @@ const Footer = () => {
               <h3 className="text-xl font-bold mb-4 text-white">SHOP</h3>
               <ul className="space-y-2">
                 <li>
-                  <Link
-                    href="/#signature-products"
-                    className=""
-                  >
+                  <Link href="/#signature-products">
                     Order Meals / Ingredients
                   </Link>
                 </li>
@@ -132,17 +146,32 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4 text-white">STAY CONNECTED</h3>
             <p>Subscribe for exclusive recipes, offers, and African food stories.</p>
 
-            {/* FORM */}
-            <form className="my-4 flex  items-center gap-3 w-full">
+            {/* SUBSCRIBE FORM */}
+            <form onSubmit={handleSubscribe} className="my-4 flex items-center gap-3 w-full">
               <input
                 type="email"
                 placeholder="Your email"
                 className="bg-[#ffffff20] py-2 px-4 rounded-xl flex-1"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
               />
-              <button className="bg-[#F8D210] h-10 w-10 flex justify-center items-center rounded-xl">
-                <Send className="w-4 h-4 text-black" />
+
+              <button
+                disabled={loading}
+                className="bg-[#F8D210] h-10 w-10 flex justify-center items-center rounded-xl"
+              >
+                {loading ? (
+                  <div className="h-4 w-4 border-2 border-black border-t-transparent rounded-full animate-spin" />
+                ) : (
+                  <Send className="w-4 h-4 text-black" />
+                )}
               </button>
             </form>
+
+            {success && (
+              <p className="text-green-300 text-sm fade-in">🎉 You’re subscribed!</p>
+            )}
 
             {/* CONTACT INFO */}
             <div className="space-y-4 text-sm mt-20">
@@ -166,7 +195,7 @@ const Footer = () => {
               </div>
 
               <div className="flex gap-3 items-center">
-                <div className="h-10 w-10 flex items-center justify-center border border-[#D62828] bg-[#D6282830] rounded-xl">
+                <div className="min-h-10 min-w-10 flex items-center justify-center border border-[#D62828] bg-[#D6282830] rounded-xl">
                   <MapPin className="h-4 w-4 text-[#D62828]" />
                 </div>
                 <div className="space-y-2">
@@ -189,6 +218,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
+
       </div>
     </footer>
   );
