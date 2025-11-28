@@ -7,7 +7,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 // Register ScrollTrigger plugin
 if (typeof window !== 'undefined') {
-  gsap.registerPlugin(ScrollTrigger)
+    gsap.registerPlugin(ScrollTrigger)
 }
 
 const TraditionalItems = () => {
@@ -38,14 +38,14 @@ const TraditionalItems = () => {
         },
         {
             image: '/homepage/traditional-products/product-5.png',
-            title: 'CHEBE WOODEN GAME BOARD',
+            title: 'Ayo Olopon (Chebe Wooden Game Board)',
             description: 'Traditional African board game',
             actionText: 'SHOP NOW',
         },
         {
             image: '/homepage/traditional-products/product-6.png',
-            title: 'Classic wooden game board',
-            description: 'Traditional African wooden game board - handcrafted for the classic strategy game',
+            title: 'Agbo (Traditional Herbs)',
+            description: 'Natural herbs and roots used for traditional African remedies',
             actionText: 'SHOP NOW',
         }
     ]
@@ -153,13 +153,13 @@ const TraditionalItems = () => {
             <div className="max-w-7xl mx-auto">
                 {/* Header Section */}
                 <div className="text-center mb-12">
-                    <h2 
+                    <h2
                         ref={headingRef}
                         className="text-3xl md:text-4xl font-bold mb-4 opacity-0"
                     >
                         TRADITIONAL <span className="text-[#fecc2a]">AFRICAN ITEMS</span>
                     </h2>
-                    <p 
+                    <p
                         ref={subtitleRef}
                         className="text-gray-600 max-w-2xl mx-auto opacity-0"
                     >
@@ -192,9 +192,9 @@ const TraditionalItems = () => {
 
                 {/* View All Products Button */}
                 <div className="text-center mt-8">
-                    <a 
+                    <a
                         ref={buttonRef}
-                        href={process.env.NEXT_PUBLIC_OWANBE_URL as string} 
+                        href={process.env.NEXT_PUBLIC_OWANBE_URL as string}
                         className="bg-transparent border border-black text-black px-3 md:py-3 py-2 text-sm md:px-8 rounded-full transition-colors opacity-0 hover:bg-black hover:text-white duration-300"
                     >
                         <span>VIEW ALL PRODUCTS</span>
