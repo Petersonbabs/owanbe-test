@@ -50,10 +50,10 @@ const OurMoments = () => {
     };
   }, [isOpen, handlePrevious, handleNext]);
 
-  const openLightbox = (index: number) => {
-    setCurrentIndex(index);
-    setIsOpen(true);
-  };
+  // const openLightbox = (index: number) => {
+  //   setCurrentIndex(index);
+  //   setIsOpen(true);
+  // };
 
   const closeLightbox = () => {
     setIsOpen(false);
@@ -88,7 +88,7 @@ const OurMoments = () => {
           >
             <div
               className="relative w-full lg:row-span-2 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-              onClick={() => openLightbox(0)}
+              // onClick={() => openLightbox(0)}
             >
               <Image
                 src="/images/moments.png"
@@ -103,7 +103,7 @@ const OurMoments = () => {
 
             <div
               className="relative w-full lg:row-span-1 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-              onClick={() => openLightbox(1)}
+              // onClick={() => openLightbox(1)}
             >
               <Image
                 src="/images/moment2.jpg"
@@ -117,7 +117,7 @@ const OurMoments = () => {
 
             <div
               className="relative w-full lg:row-span-1 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-              onClick={() => openLightbox(2)}
+              // onClick={() => openLightbox(2)}
             >
               <Image
                 src="/images/moment3.jpg"
@@ -139,7 +139,7 @@ const OurMoments = () => {
           >
             <div
               className="relative w-full lg:row-span-2 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-              onClick={() => openLightbox(3)}
+              // onClick={() => openLightbox(3)}
             >
               <Image
                 src="/images/moment4.jpg"
@@ -154,7 +154,7 @@ const OurMoments = () => {
 
             <div
               className="relative w-full lg:row-span-1 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-              onClick={() => openLightbox(4)}
+              // onClick={() => openLightbox(4)}
             >
               <Image
                 src="/images/moment5.jpg"
@@ -168,7 +168,7 @@ const OurMoments = () => {
 
             <div
               className="relative w-full lg:row-span-1 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-              onClick={() => openLightbox(5)}
+              // onClick={() => openLightbox(5)}
             >
               <Image
                 src="/images/moment6.jpg"
@@ -188,7 +188,7 @@ const OurMoments = () => {
             <div
               key={index}
               className="relative w-full h-[300px] md:h-[500px] lg:h-full rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-              onClick={() => openLightbox(index)}
+              // onClick={() => openLightbox(index)}
             >
               <Image
                 src={image.src}
@@ -206,54 +206,57 @@ const OurMoments = () => {
 
       {isOpen && (
         <div
-          className="fixed inset-0 z-50 bg-black bg-opacity-95 flex items-center justify-center"
+          className="fixed top-0 left-0 right-0 bottom-0 w-full h-screen bg-black/95 flex items-center justify-center p-4"
           onClick={closeLightbox}
         >
           <button
-            className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors z-10"
+            className="absolute top-4 right-4 md:top-6 md:right-6 text-white hover:text-gray-300 transition-colors bg-black/50 rounded-full p-2"
             onClick={closeLightbox}
             aria-label="Close"
           >
-            <X className="w-8 h-8" />
+            <X className="w-6 h-6 md:w-8 md:h-8" />
           </button>
 
           <button
-            className="absolute left-4 text-white hover:text-gray-300 transition-colors z-10"
+            className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 transition-colors bg-black/50 rounded-full p-2"
             onClick={(e) => {
               e.stopPropagation();
               handlePrevious();
             }}
             aria-label="Previous image"
           >
-            <ChevronLeft className="w-10 h-10" />
+            <ChevronLeft className="w-6 h-6 md:w-10 md:h-10" />
           </button>
 
           <button
-            className="absolute right-4 text-white hover:text-gray-300 transition-colors z-10"
+            className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 transition-colors bg-black/50 rounded-full p-2"
             onClick={(e) => {
               e.stopPropagation();
               handleNext();
             }}
             aria-label="Next image"
           >
-            <ChevronRight className="w-10 h-10" />
+            <ChevronRight className="w-6 h-6 md:w-10 md:h-10" />
           </button>
 
           <div
-            className="relative max-w-7xl max-h-[90vh] mx-4"
+            className="absolute inset-0 flex items-center justify-center p-4"
             onClick={(e) => e.stopPropagation()}
           >
-            <Image
-              src={images[currentIndex].src}
-              alt={images[currentIndex].alt}
-              width={1200}
-              height={800}
-              className="max-w-full max-h-[90vh] object-contain"
-              priority
-            />
+            <div className="relative max-w-full max-h-full flex items-center justify-center">
+              <Image
+                src={images[currentIndex].src}
+                alt={images[currentIndex].alt}
+                width={1920}
+                height={1080}
+                className="max-w-full max-h-[90vh] w-auto h-auto object-contain"
+                priority
+                quality={95}
+              />
+            </div>
           </div>
 
-          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-sm">
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white text-sm md:text-base bg-black/50 px-4 py-2 rounded-full">
             {currentIndex + 1} / {images.length}
           </div>
         </div>
