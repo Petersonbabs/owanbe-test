@@ -13,13 +13,17 @@ const Hero = () => {
                 {/* Text Content */}
                 <div className="w-full md:w-1/2 mb-8 md:mb-0 flex flex-col items-start md:gap-4">
                     {/* Main Heading with staggered animation */}
-                    <h1 className="text-4xl md:text-6xl font-bold mb-4 text-black animate-fade-in-up">
-                        <span className="animate-fade-in-up [animation-delay:100ms] opacity-0 inline-block">DINING</span>
+                    <h1 className="text-4xl md:text-5xl space-y-2 font-bold mb-4 text-black animate-fade-in-up">
+                        <span className="animate-fade-in-up [animation-delay:100ms] opacity-0 inline-block">DELICIOUS <span className="text-[#fecc2a]">MEALS</span> AND</span>
                         <br />
-                        <span className="animate-fade-in-up [animation-delay:300ms] opacity-0 inline-block">REDEFINED</span>
+                        <span className="animate-fade-in-up [animation-delay:300ms] opacity-0 inline-block">AUTHENTIC</span>
                         <br />
                         <span className="animate-fade-in-up [animation-delay:500ms] opacity-0 inline-block">
-                            WITH <span className="text-[#fecc2a]">EVERY BITE</span>
+                            <span className="text-[#D32E12]">INGREDIENT</span>, ONE
+                        </span>
+                        <br />
+                        <span className="animate-fade-in-up [animation-delay:700ms] opacity-0 inline-block">
+                            EXPERIENCE
                         </span>
                     </h1>
 
@@ -44,7 +48,7 @@ const Hero = () => {
                     {/* Main Circular Image */}
                     <div className="relative z-10 w-56 h-56 sm:w-72 sm:h-72 md:w-96 md:h-96 mx-auto">
                         <img
-                            src="/homepage/hero-1.png"
+                            src="/homepage/hero-amala.png"
                             alt="Featured Dish"
                             className="rounded-full mx-auto md:mx-0 object-cover animate-scale-in [animation-delay:1100ms]"
                         />
@@ -57,7 +61,7 @@ const Hero = () => {
                                 className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 rounded-full border-4 border-white object-cover"
                             />
                         </div>
-                        
+
                         <div className="absolute z-20 bottom-0 right-0 md:-bottom-8 md:-right-16 animate-float [animation-delay:1500ms] [animation-duration:3s]">
                             <img
                                 src="/homepage/hero-3.png"
@@ -68,7 +72,7 @@ const Hero = () => {
 
                         <div className="absolute z-20 bottom-0 left-0 md:-bottom-8 md:left-0 animate-float [animation-delay:1700ms] [animation-duration:2.5s]">
                             <img
-                                src="/homepage/hero-4.png"
+                                src="/homepage/meal/jollof.png"
                                 alt="Ingredient"
                                 className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 rounded-full border-4 border-white object-cover"
                             />

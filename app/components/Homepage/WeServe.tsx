@@ -7,49 +7,49 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 // Register ScrollTrigger plugin
 if (typeof window !== 'undefined') {
-  gsap.registerPlugin(ScrollTrigger)
+    gsap.registerPlugin(ScrollTrigger)
 }
 
 const WeServe = () => {
     const meals = [
         {
-            image: '/homepage/meal/meal-1.png',
+            image: '/homepage/meal/amala.png',
             title: 'Amala & Gbegiri',
-            description: 'Smooth swallow served with delicious soup',
+            description: 'Traditional yam flour served with gbegiri soup',
             actionText: 'ORDER MEAL',
         },
         {
             image: '/homepage/meal/meal-2.png',
-            title: 'Ewa Agoyin (Mashed Beans)',
-            description: 'Soft beans in spicy rich pepper sauce',
+            title: 'Ewa Agoyin',
+            description: 'Soft beans in rich spicy pepper sauce',
             actionText: 'ORDER MEAL',
         },
         {
-            image: '/homepage/meal/meal-3.png',
+            image: '/homepage/meal/jollof.png',
             title: 'Smoky Jollof Rice',
-            description: 'Classic West African one-pot rice dish',
+            description: 'Authentic party jollof with smoky flavor',
             actionText: 'ORDER MEAL',
         },
         {
-            image: '/homepage/meal/meal-4.png',
-            title: 'Moi Moi (Bean Pudding)',
+            image: '/homepage/meal/moi-moi.png',
+            title: 'Moi Moi',
             description: 'Steamed bean pudding with rich flavors',
             actionText: 'ORDER MEAL',
         },
         {
-            image: '/homepage/meal/meal-5.png',
-            title: 'Efo Riro (Spinach Stew)',
-            description: 'Rich spinach stew with assorted meat',
+            image: '/homepage/meal/efo-riro.png',
+            title: 'Efo Riro',
+            description: 'Rich spinach soup with assorted meat',
             actionText: 'ORDER MEAL',
         },
         {
             image: '/homepage/meal/meal-6.png',
-            title: 'YOYO ( Whitebait Fish)',
-            description: 'Perfectly seasoned fresh fish',
+            title: 'Yoyo (Whitebait Fish)',
+            description: 'Perfectly seasoned fresh whitebait',
             actionText: 'ORDER MEAL',
         },
         {
-            image: '/homepage/meal/meal-7.png',
+            image: '/homepage/meal/puff-puff.png',
             title: 'Puff Puff',
             description: 'Sweet, fluffy deep-fried dough balls',
             actionText: 'ORDER MEAL',
@@ -161,22 +161,22 @@ const WeServe = () => {
             <div className="max-w-7xl mx-auto">
                 {/* Header Section */}
                 <div className="text-center mb-12">
-                    <div 
+                    <div
                         ref={headingRef}
                         className="text-3xl md:text-4xl justify-center items-center md:gap-4 flex flex-col md:flex-row font-bold mb-8 leading-0.5 opacity-0"
                     >
                         <div className='flex items-center gap-2'>
-                            <span>AT</span> 
-                            <img 
-                                src="/brand/owanbe-logo.png" 
-                                className='w-32 p-0 mb-4' 
+                            <span>AT</span>
+                            <img
+                                src="/brand/owanbe-logo.png"
+                                className='w-32 p-0 mb-4'
                                 alt="Owanbe Logo"
                             />
-                        </div> 
-                        <span className='hidden md:inline'>-</span> 
+                        </div>
+                        <span className='hidden md:inline'>-</span>
                         <p>WE <span className="text-[#fecc2a]">SERVE</span></p>
                     </div>
-                    <p 
+                    <p
                         ref={descriptionRef}
                         className="text-gray-600 max-w-2xl mx-auto opacity-0"
                     >
@@ -206,9 +206,9 @@ const WeServe = () => {
 
                 {/* View Full Menu Button */}
                 <div className="text-center mt-16">
-                    <a 
+                    <a
                         ref={buttonRef}
-                        href={process.env.NEXT_PUBLIC_OWANBE_URL as string} 
+                        href={process.env.NEXT_PUBLIC_OWANBE_URL as string}
                         className="bg-transparent border border-black text-black px-3 md:py-3 py-2 text-sm md:px-8 rounded-full transition-colors opacity-0"
                     >
                         <span>VIEW FULL MENU</span>

@@ -138,7 +138,7 @@ const Hero = () => {
                             ref={el => { textLinesRef.current[1] = el }}
                             className="inline-block opacity-0 transform-gpu"
                         >
-                            AFRICAN DISHES
+                            AFRICA
                         </span>
                         <br />
                         <span

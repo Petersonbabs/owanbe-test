@@ -83,7 +83,7 @@ const ProductsSection = () => {
               </li>
             </ul>
 
-            <button onClick={() => router.push('https://owanbemart.africa.restaurant/')}  className="border-white border rounded-[24px] hover:bg-[#FF7F00] text-[0.9rem] md:text-[0.9rem] text-white font-bold py-3 px-6  transition-colors mt-6">
+            <button onClick={() => router.push('https://owanbemart.africa.restaurant/')}  className="border-white border rounded-3xl hover:bg-[#FF7F00] text-[0.9rem] md:text-[0.9rem] text-white font-bold py-3 px-6  transition-colors mt-6">
               ORDER NOW
             </button>
           </div>

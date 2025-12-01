@@ -38,43 +38,41 @@ const BottomSection = () => {
             </div>
 
             <p className="text-[0.9rem] md:text-[1rem] leading-relaxed max-w-lg">
-              Authentic Nigerian meals prepared fresh by expert chefs, delivered
-              straight to your door. Perfect for busy professionals,
-              celebrations, or anyone craving home-cooked African food.
+              Authentic Nigerian meals, made fresh and custom-made to your taste by expert chefs, delivered straight to your door. Perfect for busy professionals, celebrations, or anyone craving home-cooked African food.
             </p>
 
             <ul className="space-y-4 max-w-lg">
               <li className="flex items-center gap-3">
-               <div>
-                <Image src="/images/chef.svg" alt="Chef Hat" width={17} height={17} />
-               </div>
+                <div>
+                  <Image src="/images/chef.svg" alt="Chef Hat" width={17} height={17} />
+                </div>
                 <span className="text-[0.9rem] md:text-[1rem]">Chef-prepared authentic recipes</span>
               </li>
               <li className="flex items-start gap-3">
-               <div>
-                <Image src="/images/chef.svg" alt="Clock" width={17} height={17} />
-               </div>
+                <div>
+                  <Image src="/images/chef.svg" alt="Clock" width={17} height={17} />
+                </div>
                 <span className="text-[0.9rem] md:text-[1rem]">
                   Ready in minutes, no cooking required
                 </span>
               </li>
               <li className="flex items-start gap-3">
-               <div>
-                <Image src="/images/chef.svg" alt="Truck" width={17} height={17} />
-               </div>
+                <div>
+                  <Image src="/images/chef.svg" alt="Truck" width={17} height={17} />
+                </div>
                 <span className="text-[0.9rem] md:text-[1rem]">Fresh delivery to your doorstep</span>
               </li>
               <li className="flex items-start gap-3">
-               <div>
-                <Image src="/images/chef.svg" alt="Party Popper" width={17} height={17} />
-               </div>
+                <div>
+                  <Image src="/images/chef.svg" alt="Party Popper" width={17} height={17} />
+                </div>
                 <span className="text-[0.9rem] md:text-[1rem]">
                   Perfect for parties and celebrations
                 </span>
               </li>
             </ul>
 
-            <button onClick={() => router.push('https://owanbemart.africa.restaurant/')}  className="border-white border rounded-[24px] hover:bg-[#FF7F00] text-[0.9rem] md:text-[0.9rem] text-white font-bold py-3 px-6  transition-colors mt-6">
+            <button onClick={() => router.push('https://owanbemart.africa.restaurant/')} className="border-white border rounded-3xl hover:bg-[#FF7F00] text-[0.9rem] md:text-[0.9rem] text-white font-bold py-3 px-6  transition-colors mt-6">
               ORDER NOW
             </button>
           </div>
