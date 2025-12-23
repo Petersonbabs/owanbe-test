@@ -185,6 +185,7 @@ const FollowOurJourney = () => {
           </div>
         </section>
 
+
         {/* mobile view */}
         <section className="grid mt-5 grid-cols-1 sm:hidden gap-5 md:gap-5">
           {images.slice(0, 6).map((image, index) => (
