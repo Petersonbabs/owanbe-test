@@ -82,7 +82,7 @@ const FollowOurJourney = () => {
 
         {/* desktop view */}
         <section className="hidden sm:block">
-        <div
+          <div
             className="grid grid-cols-1 lg:grid-rows-2 gap-5 md:gap-5"
             style={{
               gridTemplateColumns:
@@ -91,7 +91,7 @@ const FollowOurJourney = () => {
           >
             <div
               className="relative w-full lg:row-span-2 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-              //  onClick={() => openLightbox(0)}
+            //  onClick={() => openLightbox(0)}
             >
               <Image
                 src="/images/follow1.png"
@@ -106,7 +106,7 @@ const FollowOurJourney = () => {
 
             <div
               className="relative w-full lg:row-span-1 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-              // onClick={() => openLightbox(1)}
+            // onClick={() => openLightbox(1)}
             >
               <Image
                 src="/images/follow2.png"
@@ -120,7 +120,7 @@ const FollowOurJourney = () => {
 
             <div
               className="relative w-full lg:row-span-1 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-              // onClick={() => openLightbox(2)}
+            // onClick={() => openLightbox(2)}
             >
               <Image
                 src="/images/follow3.png"
@@ -142,7 +142,7 @@ const FollowOurJourney = () => {
           >
             <div
               className="relative w-full lg:row-span-1 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-              // onClick={() => openLightbox(3)}
+            // onClick={() => openLightbox(3)}
             >
               <Image
                 src="/images/follow4.png"
@@ -156,7 +156,7 @@ const FollowOurJourney = () => {
 
             <div
               className="relative w-full lg:row-span-1 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-              // onClick={() => openLightbox(4)}
+            // onClick={() => openLightbox(4)}
             >
               <Image
                 src="/images/follow5.png"
@@ -170,7 +170,7 @@ const FollowOurJourney = () => {
 
             <div
               className="relative w-full lg:row-span-2 lg:col-start-2 lg:row-start-1 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-              //  onClick={() => openLightbox(5)}
+            //  onClick={() => openLightbox(5)}
             >
               <Image
                 src="/images/follow6.png"
@@ -190,8 +190,8 @@ const FollowOurJourney = () => {
           {images.slice(0, 6).map((image, index) => (
             <div
               key={index}
-              className="relative w-full h-[300px] md:h-[500px] lg:h-full rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-              // onClick={() => openLightbox(index)}
+              className="relative w-full h-75 md:h-125 lg:h-full rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+            // onClick={() => openLightbox(index)}
             >
               <Image
                 src={image.src}
@@ -208,8 +208,8 @@ const FollowOurJourney = () => {
 
         <div className="grid mt-5 grid-cols-1 lg:grid-cols-3 gap-5 md:gap-5">
           <div
-            className="relative w-full h-[300px] md:h-[500px] lg:h-full rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-            // onClick={() => openLightbox(6)}
+            className="relative w-full h-75 md:h-125 lg:h-full rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+          // onClick={() => openLightbox(6)}
           >
             <Image
               src="/images/follow7.jpg"
@@ -222,8 +222,8 @@ const FollowOurJourney = () => {
           </div>
 
           <div
-            className="relative w-full h-[300px] md:h-[500px] lg:h-full rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-            // onClick={() => openLightbox(7)}
+            className="relative w-full h-75 md:h-125 lg:h-full rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+          // onClick={() => openLightbox(7)}
           >
             <Image
               src="/images/follow8.jpg"
@@ -236,8 +236,8 @@ const FollowOurJourney = () => {
           </div>
 
           <div
-            className="relative w-full h-full sm:h-[500px] md:h-[500px] lg:h-full rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-            // onClick={() => openLightbox(8)}
+            className="relative w-full h-full sm:h-125 md:h-125 lg:h-full rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+          // onClick={() => openLightbox(8)}
           >
             <Image
               src="/images/follow9.jpg"
