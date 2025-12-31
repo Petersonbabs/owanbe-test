@@ -1,5 +1,5 @@
 import { MoveRight } from 'lucide-react'
-import Link from 'next/link'
+import Image from 'next/image'
 import React from 'react'
 interface ProductCardProps {
     image: string
@@ -25,7 +25,7 @@ function ProductCard({
 }: ProductCardProps) {
     return (
         <div className={"bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow" + customStyles}>
-            <img src={image} alt={title} className={"w-full h-auto object-contain  " + customImageStyle} />
+            <Image src={image} alt={title} className={"w-full h-auto object-contain  " + customImageStyle} />
             <div className={"p-4" + customContentStyles}>
                 <h3 className="font-bold text-lg mb-1">{title}</h3>
                 <p className="text-sm text-gray-600 mb-2">{description}</p>

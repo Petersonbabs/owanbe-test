@@ -3,14 +3,14 @@
 import { Facebook, Instagram, Mail, MapPin, Phone, Send } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
 
-  const handleSubscribe = async (e:any) => {
+  const handleSubscribe = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!email) return;
 
@@ -51,7 +51,7 @@ const Footer = () => {
                   alt="Logo"
                   width={100}
                   height={50}
-                  className="w-[100px] h-[50px] object-contain"
+                  className="w-25 h-12.5 object-contain"
                 />
                 <p className="text-sm">READY-TO-EAT MEALS</p>
                 <div className="flex items-center space-x-4 mt-2">
@@ -77,7 +77,7 @@ const Footer = () => {
                     alt="Logo"
                     width={50}
                     height={50}
-                    className="w-[50px] h-[50px] rounded-full"
+                    className="w-12.5 h-12.5 rounded-full"
                   />
                 </div>
                 <p className="text-sm">PREMIUM INGREDIENTS</p>

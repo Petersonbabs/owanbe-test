@@ -1,9 +1,9 @@
 'use client'
 import React, { useEffect, useRef } from 'react'
 import ProductCard from '../ui/ProductCard'
-import Link from 'next/link'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import Image from 'next/image'
 
 // Register ScrollTrigger plugin
 if (typeof window !== 'undefined') {
@@ -167,7 +167,7 @@ const WeServe = () => {
                     >
                         <div className='flex items-center gap-2'>
                             <span>AT</span>
-                            <img
+                            <Image
                                 src="/brand/owanbe-logo.png"
                                 className='w-32 p-0 mb-4'
                                 alt="Owanbe Logo"

@@ -1,6 +1,6 @@
 'use client'
 import React, { useEffect, useRef } from 'react'
-import { MapPin, ChefHat, Clock, Heart, Badge, Award, Users2 } from 'lucide-react'
+import {  Heart, Award, Users2 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 

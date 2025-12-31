@@ -1,7 +1,6 @@
 'use client'
 import React, { useEffect, useRef } from 'react'
 import ProductCard from '../ui/ProductCard'
-import Link from 'next/link'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 

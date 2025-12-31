@@ -1,9 +1,9 @@
 'use client'
-import { CheckCircle, Dot, MoveRight } from "lucide-react"
-import Link from "next/link"
+
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import Image from 'next/image'
 
 // Register ScrollTrigger plugin
 if (typeof window !== 'undefined') {
@@ -181,14 +181,14 @@ const Journey = () => {
                 <div className="w-full md:w-1/2 mb-8 md:mb-0 flex justify-between items-center">
                     {/* Mobile Layout - shown on mobile */}
                     <div className="relative md:hidden">
-                        <img
+                        <Image
                             ref={mainImageRefMobile}
                             src="/homepage/team-in-yellow.png"
                             className="w-full h-auto rounded-full max-w-md mx-auto opacity-0 transform-gpu"
                             alt="Our journey team"
                         />
                         <div className="absolute -bottom-8 right-0">
-                            <img
+                            <Image
                                 ref={smallImageRefMobile}
                                 src="/homepage/meal/meal-4.png"
                                 className="w-32 h-32 rounded-full object-cover opacity-0 transform-gpu"
@@ -199,14 +199,14 @@ const Journey = () => {
 
                     {/* Desktop Layout - shown on desktop */}
                     <div className="relative hidden md:block">
-                        <img
+                        <Image
                             ref={mainImageRefDesktop}
                             src="/homepage/team-in-yellow.png"
                             className="w-full h-auto rounded-full max-w-md mx-auto opacity-0 transform-gpu cursor-pointer"
                             alt="Our journey team"
                         />
                         <div className="absolute -bottom-8 right-0">
-                            <img
+                            <Image
                                 ref={smallImageRefDesktop}
                                 src="/homepage/meal/meal-4.png"
                                 className="w-32 h-32 rounded-full object-cover opacity-0 transform-gpu cursor-pointer"

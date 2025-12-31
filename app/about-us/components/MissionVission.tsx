@@ -1,6 +1,6 @@
+import { Heart, Target } from "lucide-react"
 
-import { Utensils, Leaf, Book, Award, Goal, Target, Heart } from 'lucide-react'
-import Image from 'next/image'
+
 
 const Features = () => {
     const features = [

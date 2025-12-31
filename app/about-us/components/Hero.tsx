@@ -2,6 +2,7 @@
 import { useEffect, useRef } from "react"
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import Image from "next/image"
 
 // Register ScrollTrigger plugin
 if (typeof window !== 'undefined') {
@@ -169,7 +170,7 @@ const Hero = () => {
                 <div className="w-full md:w-1/2 relative flex justify-center md:justify-end mt-10 md:mt-0">
                     {/* Main Circular Image */}
                     <div className="relative z-10 w-56 h-56 sm:w-72 sm:h-72 md:w-96 md:h-96 mx-auto">
-                        <img
+                        <Image
                             ref={mainImageRef}
                             src="/about/pots.png"
                             alt="Traditional cooking pots"
@@ -178,7 +179,7 @@ const Hero = () => {
 
                         {/* Top Right Image */}
                         <div className="absolute z-20 -top-4 -right-8 md:-top-8 md:-right-16">
-                            <img
+                            <Image
                                 ref={smallImageRef}
                                 src="/homepage/team-in-yellow.png"
                                 alt="Our team"

@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import Image from 'next/image'
 
 if (typeof window !== 'undefined') {
     gsap.registerPlugin(ScrollTrigger)
@@ -92,25 +93,25 @@ const MeetTheTeam = () => {
                 MEET THE <span className="text-[#fecc2a]">TEAM</span>
             </h2>
 
-            <div className='flex flex-col md:flex-row justify-between max-w-[1200px] mx-auto gap-4 md:gap-16 items-center my-8'>
-                <div className='max-w-[200px] md:max-w-[350px]'>
-                    <img
+            <div className='flex flex-col md:flex-row justify-between max-w-300 mx-auto gap-4 md:gap-16 items-center my-8'>
+                <div className='max-w-50 md:max-w-87.5'>
+                    <Image
                         ref={el => { imagesRef.current[0] = el }}
                         src="/about/staffs.png"
                         alt="Team member 1"
                         className='w-full opacity-0 transform-gpu cursor-pointer rounded-lg hover:shadow-lg transition-all duration-300'
                     />
                 </div>
-                <div className='max-w-[200px] md:max-w-[350px]'>
-                    <img
+                <div className='max-w-50 md:max-w-87.5'>
+                    <Image
                         ref={el => { imagesRef.current[1] = el }}
                         src="/about/staffs-2.png"
                         alt="Team member 2"
                         className='w-full opacity-0 transform-gpu cursor-pointer rounded-lg hover:shadow-lg transition-all duration-300'
                     />
                 </div>
-                <div className='max-w-[200px] md:max-w-[350px]'>
-                    <img
+                <div className='max-w-50 md:max-w-87.5'>
+                    <Image
                         ref={el => { imagesRef.current[2] = el }}
                         src="/about/staffs-3.png"
                         alt="Team member 3"

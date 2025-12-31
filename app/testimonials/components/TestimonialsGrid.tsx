@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Star } from "lucide-react";
-import { useScrollAnimation, useStaggerAnimation } from '@/app/hooks/useScrollAnimation';
+import {  useStaggerAnimation } from '@/app/hooks/useScrollAnimation';
 
 const testimonials = [
   {

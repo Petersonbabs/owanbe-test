@@ -1,4 +1,5 @@
 import { MoveRight } from 'lucide-react'
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
@@ -47,7 +48,7 @@ const Hero = () => {
                 <div className="w-full md:w-1/2 relative flex justify-center md:justify-end mt-10 md:mt-0">
                     {/* Main Circular Image */}
                     <div className="relative z-10 w-56 h-56 sm:w-72 sm:h-72 md:w-96 md:h-96 mx-auto">
-                        <img
+                        <Image
                             src="/homepage/hero-amala.png"
                             alt="Featured Dish"
                             className="rounded-full mx-auto md:mx-0 object-cover animate-scale-in [animation-delay:1100ms]"
@@ -55,7 +56,7 @@ const Hero = () => {
 
                         {/* Floating small images */}
                         <div className="absolute z-20 -top-4 -right-8 md:-top-8 md:-right-16 animate-float [animation-delay:1300ms]">
-                            <img
+                            <Image
                                 src="/homepage/hero-2.png"
                                 alt="Spice"
                                 className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 rounded-full border-4 border-white object-cover"
@@ -63,7 +64,7 @@ const Hero = () => {
                         </div>
 
                         <div className="absolute z-20 bottom-0 right-0 md:-bottom-8 md:-right-16 animate-float [animation-delay:1500ms] [animation-duration:3s]">
-                            <img
+                            <Image
                                 src="/homepage/hero-3.png"
                                 alt="Ingredient"
                                 className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 rounded-full border-4 border-white object-cover"
@@ -71,7 +72,7 @@ const Hero = () => {
                         </div>
 
                         <div className="absolute z-20 bottom-0 left-0 md:-bottom-8 md:left-0 animate-float [animation-delay:1700ms] [animation-duration:2.5s]">
-                            <img
+                            <Image
                                 src="/homepage/meal/jollof.png"
                                 alt="Ingredient"
                                 className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 rounded-full border-4 border-white object-cover"

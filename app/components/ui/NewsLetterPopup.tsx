@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useState } from "react"
+import { FormEvent, useEffect, useState } from "react"
 
 export default function NewsletterPopup() {
     const [show, setShow] = useState(false)
@@ -22,7 +22,7 @@ export default function NewsletterPopup() {
         localStorage.setItem("newsletter_popup_shown", "true")
     }
 
-    const handleSubmit = async (e:any) => {
+    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         setLoading(true)
 

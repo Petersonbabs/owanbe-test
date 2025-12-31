@@ -40,7 +40,7 @@ const StatisticsBar = () => {
 
             // Count all numbers simultaneously
             tl.to(numbersRef.current, {
-                innerText: (i:any) => [10000, 500, 50, 4.9][i],
+                innerText: (i:number) => [10000, 500, 50, 4.9][i],
                 duration: 2,
                 snap: { innerText: 1 },
                 ease: "power2.out",

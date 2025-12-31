@@ -1,9 +1,10 @@
 'use client'
-import { CheckCircle, Dot, MoveRight } from "lucide-react"
+import { Dot, MoveRight } from "lucide-react"
 import Link from "next/link"
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import Image from "next/image"
 
 // Register ScrollTrigger plugin
 if (typeof window !== 'undefined') {
@@ -136,13 +137,13 @@ const OurCommitment = () => {
             )
 
             // Add continuous floating animation to badge
-            const floatAnimation = gsap.to(badgeRef.current, {
-                y: -10,
-                duration: 2,
-                repeat: -1,
-                yoyo: true,
-                ease: "sine.inOut"
-            })
+            // const floatAnimation = gsap.to(badgeRef.current, {
+            //     y: -10,
+            //     duration: 2,
+            //     repeat: -1,
+            //     yoyo: true,
+            //     ease: "sine.inOut"
+            // })
 
             // Add hover effects to button
             buttonRef.current?.addEventListener('mouseenter', () => {
@@ -194,7 +195,7 @@ const OurCommitment = () => {
                 <div className="w-full md:w-1/2 mb-8 md:mb-0 flex justify-between items-center">
                     {/* Mobile Layout */}
                     <div ref={imageRef} className="relative md:hidden">
-                        <img
+                        <Image
                             src="/homepage/team-in-yellow.png"
                             className="w-full h-auto rounded-full max-w-md mx-auto cursor-pointer"
                             alt="Our team"
@@ -204,7 +205,7 @@ const OurCommitment = () => {
                             <p className="text-sm">Guaranteed Excellence</p>
                         </div>
                         <div className="absolute -bottom-8 sm:bottom-4 left-0">
-                            <img
+                            <Image
                                 ref={smallImageRef}
                                 src="/homepage/team-member-in-green.png"
                                 className="w-20 h-20 rounded-full object-cover cursor-pointer"
@@ -215,7 +216,7 @@ const OurCommitment = () => {
 
                     {/* Desktop Layout */}
                     <div ref={imageRef} className="relative hidden md:block">
-                        <img
+                        <Image
                             src="/homepage/team.png"
                             className="w-full h-auto rounded-full max-w-md mx-auto cursor-pointer"
                             alt="Our team"
@@ -225,7 +226,7 @@ const OurCommitment = () => {
                             <p>Guaranteed Excellence</p>
                         </div>
                         <div className="absolute -bottom-8 left-0">
-                            <img
+                            <Image
                                 ref={smallImageRef}
                                 src="/homepage/team-member-in-green.png"
                                 className="w-32 h-32 rounded-full object-cover cursor-pointer"
